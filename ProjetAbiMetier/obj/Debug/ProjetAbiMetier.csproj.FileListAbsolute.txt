@@ -1,0 +1,4 @@
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ProjetAbiMetier\bin\Debug\ProjetAbiMetier.exe.config
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ProjetAbiMetier\obj\Debug\ProjetAbiMetier.csprojResolveAssemblyReference.cache
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ProjetAbiMetier\obj\Debug\ProjetAbiMetier.Properties.Resources.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ProjetAbiMetier\obj\Debug\ProjetAbiMetier.csproj.GenerateResource.Cache
