@@ -1,6 +1,6 @@
-﻿namespace ProjetAbiMetier
+﻿namespace ABI
 {
-    partial class Form1
+    partial class frmVisuCollaborateur
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.SuspendLayout();
+            // 
+            // frmVisuCollaborateur
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(435, 370);
+            this.Name = "frmVisuCollaborateur";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
     }
 }
-

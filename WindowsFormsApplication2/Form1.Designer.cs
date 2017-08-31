@@ -1,4 +1,4 @@
-﻿namespace ABI
+﻿namespace WindowsFormsApplication2
 {
     partial class Form1
     {

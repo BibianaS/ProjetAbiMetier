@@ -1,0 +1,3 @@
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ProjetAbiMetier\obj\Release\classesMetier.csprojResolveAssemblyReference.cache
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ProjetAbiMetier\obj\Release\classesMetier.Properties.Resources.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ProjetAbiMetier\obj\Release\classesMetier.csproj.GenerateResource.Cache

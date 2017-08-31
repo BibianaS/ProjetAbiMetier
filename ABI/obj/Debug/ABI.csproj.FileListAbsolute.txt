@@ -1,0 +1,11 @@
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\bin\Debug\ABI.exe.config
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\bin\Debug\ABI.exe
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\bin\Debug\ABI.pdb
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Debug\ABI.csprojResolveAssemblyReference.cache
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Debug\ABI.frmCollaborateur.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Debug\ABI.Properties.Resources.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Debug\ABI.csproj.GenerateResource.Cache
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Debug\ABI.exe
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Debug\ABI.pdb
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Debug\ABI.frmMDI.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Debug\ABI.frmVisuCollaborateur.resources

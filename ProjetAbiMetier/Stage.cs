@@ -5,28 +5,30 @@
  ***********************************************************************/
 
 using System;
-
-public class Stagiaire : Temporaire
+namespace ABI
 {
-
-
-    private String ecole;
-
-       public Stagiaire(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, String mission, DateTime dateDebut, DateTime dateFin, String ecole) : base(numContrat, qualification, statut, salaireBrut, mission, dateDebut, dateFin)
-   {
-        this.Ecole = ecole;
-   }
-
-    public string Ecole
+    public class Stagiaire : Temporaire
     {
-        get
+
+
+        private String ecole;
+
+        public Stagiaire(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, String mission, DateTime dateDebut, DateTime dateFin, String ecole) : base(numContrat, qualification, statut, salaireBrut, mission, dateDebut, dateFin)
         {
-            return this.Ecole;
+            this.Ecole = ecole;
         }
 
-        set
+        public string Ecole
         {
-            this.Ecole = value;
+            get
+            {
+                return this.Ecole;
+            }
+
+            set
+            {
+                this.Ecole = value;
+            }
         }
     }
 }

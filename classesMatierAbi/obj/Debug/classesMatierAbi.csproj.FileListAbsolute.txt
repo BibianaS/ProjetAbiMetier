@@ -1,0 +1,5 @@
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\classesMatierAbi\bin\Debug\classesMatierAbi.dll
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\classesMatierAbi\bin\Debug\classesMatierAbi.pdb
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\classesMatierAbi\obj\Debug\classesMatierAbi.csprojResolveAssemblyReference.cache
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\classesMatierAbi\obj\Debug\classesMatierAbi.dll
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\classesMatierAbi\obj\Debug\classesMatierAbi.pdb

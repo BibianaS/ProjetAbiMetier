@@ -5,42 +5,44 @@
  ***********************************************************************/
 
 using System;
-
-public class Interim : Temporaire
+namespace ABI
 {
-    private String agenceInterim;
-    private Decimal indemnitesInterim;
-
-
-    public Interim(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin, String motif, String agence, Decimal indemnites) : base(numContrat, qualification, statut, salaireBrut, dateDebut, dateFin, motif)
+    public class Interim : Temporaire
     {
-        this.AgenceInterim = agence;
-        this.IndemnitesInterim = indemnites;
-   }
+        private String agenceInterim;
+        private Decimal indemnitesInterim;
 
-    public string AgenceInterim
-    {
-        get
+
+        public Interim(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin, String motif, String agence, Decimal indemnites) : base(numContrat, qualification, statut, salaireBrut, dateDebut, dateFin, motif)
         {
-            return agenceInterim;
+            this.AgenceInterim = agence;
+            this.IndemnitesInterim = indemnites;
         }
 
-        set
+        public string AgenceInterim
         {
-            agenceInterim = value;
-        }
-    }
+            get
+            {
+                return agenceInterim;
+            }
 
-    public decimal IndemnitesInterim
-    {
-        get
-        {
-            return indemnitesInterim;
+            set
+            {
+                agenceInterim = value;
+            }
         }
 
-        set
+        public decimal IndemnitesInterim
         {
-            indemnitesInterim = value;
+            get
+            {
+                return indemnitesInterim;
+            }
+
+            set
+            {
+                indemnitesInterim = value;
+            }
         }
     }
 }

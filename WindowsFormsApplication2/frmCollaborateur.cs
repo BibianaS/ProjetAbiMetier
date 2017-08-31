@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ABI
 {
-    public partial class Form1 : Form
+    public partial class frmCollaborateur : Form
     {
-        public Form1()
+        public frmCollaborateur()
         {
             InitializeComponent();
         }

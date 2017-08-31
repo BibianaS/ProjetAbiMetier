@@ -6,32 +6,35 @@
 
 using System;
 
-public class Avenant
+namespace ABI
 {
-   public Avenant(DateTime date, String qualification, String statut, String libelle)
-   {
-      // TODO: implement
-   }
-   
-   public override String ToString()
-   {
-      // TODO: implement
-      return null;
-   }
+    public class Avenant
+    {
+        public Avenant(DateTime date, String qualification, String statut, String libelle)
+        {
+            // TODO: implement
+        }
 
-   private String Libelle;
+        public override String ToString()
+        {
+            // TODO: implement
+            return null;
+        }
 
-   public String _Libelle
-   {
-      get
-      {
-         return Libelle;
-      }
-      set
-      {
-         if (this.Libelle != value)
-            this.Libelle = value;
-      }
-   }
+        private String Libelle;
 
+        public String _Libelle
+        {
+            get
+            {
+                return Libelle;
+            }
+            set
+            {
+                if (this.Libelle != value)
+                    this.Libelle = value;
+            }
+        }
+
+    }
 }

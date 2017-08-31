@@ -1,0 +1,10 @@
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\bin\Release\ABI.exe.config
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\bin\Release\ABI.exe
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\bin\Release\ABI.pdb
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Release\ABI.frmMDI.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Release\ABI.frmCollaborateur.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Release\ABI.frmVisuCollaborateur.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Release\ABI.Properties.Resources.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Release\ABI.csproj.GenerateResource.Cache
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Release\ABI.exe
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\ABI\obj\Release\ABI.pdb

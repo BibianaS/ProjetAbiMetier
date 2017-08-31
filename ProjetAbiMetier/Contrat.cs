@@ -5,166 +5,168 @@
  ***********************************************************************/
 
 using System;
-
-public abstract class Contrat
+namespace ABI
 {
-
-    DateTime dateDebut;
-    DateTime dateFin;
-    private Int32 numeroContrat;
-    private String qualification;
-    private String statut;
-    private Decimal salaireBrut;
-
-    /// <summary>
-    /// Constructeur avec date debut et fin de contrat
-    /// </summary>
-    /// <param name="qualification"></param>
-    /// <param name="statut"></param>
-    /// <param name="salaireBrut"></param>
-    /// <param name="dateDebut"></param>
-    public Contrat(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin)
+    public abstract class Contrat
     {
-        this.NumeroContrat = numContrat;
-        this.Qualification = qualification;
-        this.Statut = statut;
-        this.SalaireBrut = salaireBrut;
-        this.DateDebut = dateDebut;
-        this.DateFin = dateFin;
-    }
 
-    /// <summary>
-    /// Constructeur avec date debut de contrat
-    /// </summary>
-    /// <param name="qualification"></param>
-    /// <param name="statut"></param>
-    /// <param name="salaireBrut"></param>
-    /// <param name="dateDebut"></param>
-    public Contrat(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut)
-    {
-        this.Qualification = qualification;
-        this.Statut = statut;
-        this.SalaireBrut = salaireBrut;
-        this.DateDebut = dateDebut;
-    }
-    
-    /// <summary>
-    /// Propriete de la qualification
-    /// </summary>
-    public String Qualification
-    {
-        get
-        {
-            return qualification;
-        }
-        set
-        {
+        DateTime dateDebut;
+        DateTime dateFin;
+        private Int32 numeroContrat;
+        private String qualification;
+        private String statut;
+        private Decimal salaireBrut;
 
-        }
-    }
-
-    /// <summary>
-    /// Propriete du Statut
-    /// </summary>
-    public String Statut
-    {
-        get
+        /// <summary>
+        /// Constructeur avec date debut et fin de contrat
+        /// </summary>
+        /// <param name="qualification"></param>
+        /// <param name="statut"></param>
+        /// <param name="salaireBrut"></param>
+        /// <param name="dateDebut"></param>
+        public Contrat(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin)
         {
-            return statut;
-        }
-        set
-        {
-        }
-    }
-
-    /// <summary>
-    /// Propriete de la date de debut du contrat
-    /// </summary>
-    public DateTime DateDebut
-    {
-        get
-        {
-            return this.dateDebut;
+            this.NumeroContrat = numContrat;
+            this.Qualification = qualification;
+            this.Statut = statut;
+            this.SalaireBrut = salaireBrut;
+            this.DateDebut = dateDebut;
+            this.DateFin = dateFin;
         }
 
-        set
+        /// <summary>
+        /// Constructeur avec date debut de contrat
+        /// </summary>
+        /// <param name="qualification"></param>
+        /// <param name="statut"></param>
+        /// <param name="salaireBrut"></param>
+        /// <param name="dateDebut"></param>
+        public Contrat(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut)
         {
+            this.Qualification = qualification;
+            this.Statut = statut;
+            this.SalaireBrut = salaireBrut;
+            this.DateDebut = dateDebut;
+        }
 
-            Int32 result = DateTime.Compare(value, DateTime.Now);
-            if (result > 0)
+        /// <summary>
+        /// Propriete de la qualification
+        /// </summary>
+        public String Qualification
+        {
+            get
             {
-                throw new Exception("Merci de reinseigner une date future");
+                return qualification;
             }
-            if (result <= 0)
+            set
             {
-                this.dateDebut = value;
+
             }
         }
-    }
 
-    /// <summary>
-    /// Propriete du salaire brut
-    /// </summary>
-    public Decimal SalaireBrut
-    {
-        get
+        /// <summary>
+        /// Propriete du Statut
+        /// </summary>
+        public String Statut
         {
-            return salaireBrut;
-        }
-
-        set
-        {
-            salaireBrut = value;
-        }
-    }
-
-    /// <summary>
-    /// Propriete date fin de contrat
-    /// </summary>
-    public DateTime DateFin
-    {
-        get
-        {
-            return dateFin;
-        }
-
-        set
-        {
-            Int32 result = DateTime.Compare(value, DateTime.Now);
-            if (result > 0)
+            get
             {
-                throw new Exception("Merci de reinseigner une date future");
+                return statut;
             }
-            if (result <= 0 && DateDebut <= value)
+            set
             {
-                this.dateFin = value;
-            }
-            else
-            {
-                throw new Exception("Verifier la date de debut et fin de contrat");
             }
         }
-    }
 
-    public Int32 NumeroContrat
-    {
-        get
+        /// <summary>
+        /// Propriete de la date de debut du contrat
+        /// </summary>
+        public DateTime DateDebut
         {
-            return numeroContrat;
+            get
+            {
+                return this.dateDebut;
+            }
+
+            set
+            {
+
+                Int32 result = DateTime.Compare(value, DateTime.Now);
+                if (result > 0)
+                {
+                    throw new Exception("Merci de reinseigner une date future");
+                }
+                if (result <= 0)
+                {
+                    this.dateDebut = value;
+                }
+            }
         }
 
-        set
+        /// <summary>
+        /// Propriete du salaire brut
+        /// </summary>
+        public Decimal SalaireBrut
         {
-            numeroContrat = value;
-        }
-    }
+            get
+            {
+                return salaireBrut;
+            }
 
-    /// <summary>
-    /// Methode qui decrit le contrat
-    /// </summary>
-    /// <returns></returns>
-    public override String ToString()
-    {
-        return "Date creation du contrat : " + DateTime.Now + ". Numéro de contrat : " + NumeroContrat + ". Qualification : " + Qualification + ". Statut : " + Statut + ". Date debut contrat : " + DateDebut + ". Date de fin : " +DateFin;
+            set
+            {
+                salaireBrut = value;
+            }
+        }
+
+        /// <summary>
+        /// Propriete date fin de contrat
+        /// </summary>
+        public DateTime DateFin
+        {
+            get
+            {
+                return dateFin;
+            }
+
+            set
+            {
+                Int32 result = DateTime.Compare(value, DateTime.Now);
+                if (result > 0)
+                {
+                    throw new Exception("Merci de reinseigner une date future");
+                }
+                if (result <= 0 && DateDebut <= value)
+                {
+                    this.dateFin = value;
+                }
+                else
+                {
+                    throw new Exception("Verifier la date de debut et fin de contrat");
+                }
+            }
+        }
+
+        public Int32 NumeroContrat
+        {
+            get
+            {
+                return numeroContrat;
+            }
+
+            set
+            {
+                numeroContrat = value;
+            }
+        }
+
+        /// <summary>
+        /// Methode qui decrit le contrat
+        /// </summary>
+        /// <returns></returns>
+        public override String ToString()
+        {
+            return "Date creation du contrat : " + DateTime.Now + ". Numéro de contrat : " + NumeroContrat + ". Qualification : " + Qualification + ". Statut : " + Statut + ". Date debut contrat : " + DateDebut + ". Date de fin : " + DateFin;
+        }
     }
 }

@@ -6,37 +6,43 @@
 
 using System;
 
-public class Cdi : Contrat
+namespace ABI
 {
-    /// <summary>
-    /// Constructeur avecdate de febut et date de fin
-    /// </summary>
-    /// <param name="qualification"></param>
-    /// <param name="statut"></param>
-    /// <param name="salaireBrut"></param>
-    /// <param name="dateDebut"></param>
-    /// <param name="dateFin"></param>
-    public Cdi(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin) : base(numContrat, qualification, statut, salaireBrut, dateDebut, dateFin)
-    {
-    }
 
-    /// <summary>
-    /// Constructeur avec date de debut uniquement
-    /// </summary>
-    /// <param name="qualification"></param>
-    /// <param name="statut"></param>
-    /// <param name="salaireBrut"></param>
-    /// <param name="dateFin"></param>
-    public Cdi(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateFin) : base(numContrat, qualification, statut, salaireBrut, dateFin)
-    {
-    }
 
-    /// <summary>
-    /// Description de la calsse CDI
-    /// </summary>
-    /// <returns></returns>
-    public override String ToString()
+    public class Cdi : Contrat
     {
-        return base.ToString();
+        /// <summary>
+        /// Constructeur avecdate de febut et date de fin
+        /// </summary>
+        /// <param name="qualification"></param>
+        /// <param name="statut"></param>
+        /// <param name="salaireBrut"></param>
+        /// <param name="dateDebut"></param>
+        /// <param name="dateFin"></param>
+        public Cdi(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin) : base(numContrat, qualification, statut, salaireBrut, dateDebut, dateFin)
+        {
+        }
+
+        /// <summary>
+        /// Constructeur avec date de debut uniquement
+        /// </summary>
+        /// <param name="qualification"></param>
+        /// <param name="statut"></param>
+        /// <param name="salaireBrut"></param>
+        /// <param name="dateFin"></param>
+        public Cdi(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateFin) : base(numContrat, qualification, statut, salaireBrut, dateFin)
+        {
+        }
+
+        /// <summary>
+        /// Description de la calsse CDI
+        /// </summary>
+        /// <returns></returns>
+        public override String ToString()
+        {
+            return base.ToString();
+        }
     }
 }
+
