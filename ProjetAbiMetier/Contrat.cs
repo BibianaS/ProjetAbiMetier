@@ -8,60 +8,89 @@ using System;
 
 public abstract class Contrat
 {
-   private String dateDebut;
-   DateTime date;
-   DateTime aujourdhui;
-   private static Int32 numeroContrat; 
-   private String qualification;
-   private String statut;
-   private Decimal salaireBrut;
 
-    public Contrat(String qualification, String statut, int jour, int anne, int mois, Decimal salaireBrut)
+    DateTime dateDebut;
+    DateTime dateFin;
+    private Int32 numeroContrat;
+    private String qualification;
+    private String statut;
+    private Decimal salaireBrut;
+
+    /// <summary>
+    /// Constructeur avec date debut et fin de contrat
+    /// </summary>
+    /// <param name="qualification"></param>
+    /// <param name="statut"></param>
+    /// <param name="salaireBrut"></param>
+    /// <param name="dateDebut"></param>
+    public Contrat(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin)
+    {
+        this.NumeroContrat = numContrat;
+        this.Qualification = qualification;
+        this.Statut = statut;
+        this.SalaireBrut = salaireBrut;
+        this.DateDebut = dateDebut;
+        this.DateFin = dateFin;
+    }
+
+    /// <summary>
+    /// Constructeur avec date debut de contrat
+    /// </summary>
+    /// <param name="qualification"></param>
+    /// <param name="statut"></param>
+    /// <param name="salaireBrut"></param>
+    /// <param name="dateDebut"></param>
+    public Contrat(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut)
     {
         this.Qualification = qualification;
         this.Statut = statut;
         this.SalaireBrut = salaireBrut;
-        date = new DateTime(anne, mois, jour);
-        dateDebut = date.ToString(); 
+        this.DateDebut = dateDebut;
+    }
+    
+    /// <summary>
+    /// Propriete de la qualification
+    /// </summary>
+    public String Qualification
+    {
+        get
+        {
+            return qualification;
+        }
+        set
+        {
+
+        }
     }
 
-      
-   public String Qualification
-   {
-      get
-      {
-         return qualification;
-      }
-      set
-      {
-         
-      }
-   }
-   
-   public String Statut
-   {
-      get
-      {
-         return statut;
-      }
-      set
-      {
-      }
-   }
-
-    public string DateDebut
+    /// <summary>
+    /// Propriete du Statut
+    /// </summary>
+    public String Statut
     {
-        
+        get
+        {
+            return statut;
+        }
+        set
+        {
+        }
+    }
 
-        get 
+    /// <summary>
+    /// Propriete de la date de debut du contrat
+    /// </summary>
+    public DateTime DateDebut
+    {
+        get
         {
             return this.dateDebut;
         }
 
         set
         {
-            aujourdhui = new DateTime();
-            Int32 result = DateTime.Compare(date, DateTime.Now);
+
+            Int32 result = DateTime.Compare(value, DateTime.Now);
             if (result > 0)
             {
                 throw new Exception("Merci de reinseigner une date future");
@@ -73,6 +102,9 @@ public abstract class Contrat
         }
     }
 
+    /// <summary>
+    /// Propriete du salaire brut
+    /// </summary>
     public Decimal SalaireBrut
     {
         get
@@ -86,10 +118,53 @@ public abstract class Contrat
         }
     }
 
-    public override String ToString()
+    /// <summary>
+    /// Propriete date fin de contrat
+    /// </summary>
+    public DateTime DateFin
     {
-        // TODO: implement
-        return null;
+        get
+        {
+            return dateFin;
+        }
+
+        set
+        {
+            Int32 result = DateTime.Compare(value, DateTime.Now);
+            if (result > 0)
+            {
+                throw new Exception("Merci de reinseigner une date future");
+            }
+            if (result <= 0 && DateDebut <= value)
+            {
+                this.dateFin = value;
+            }
+            else
+            {
+                throw new Exception("Verifier la date de debut et fin de contrat");
+            }
+        }
     }
 
+    public Int32 NumeroContrat
+    {
+        get
+        {
+            return numeroContrat;
+        }
+
+        set
+        {
+            numeroContrat = value;
+        }
+    }
+
+    /// <summary>
+    /// Methode qui decrit le contrat
+    /// </summary>
+    /// <returns></returns>
+    public override String ToString()
+    {
+        return "Date creation du contrat : " + DateTime.Now + ". Numéro de contrat : " + NumeroContrat + ". Qualification : " + Qualification + ". Statut : " + Statut + ". Date debut contrat : " + DateDebut + ". Date de fin : " +DateFin;
+    }
 }

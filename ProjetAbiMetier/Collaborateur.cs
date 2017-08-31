@@ -5,6 +5,7 @@
  ***********************************************************************/
 
 using System;
+using System.Collections.Generic;
 
 public class Collaborateur
 {
@@ -17,12 +18,21 @@ public class Collaborateur
 
     //public TypeDuContrat[] typeDuContrat;
 
+    private System.Collections.Generic.SortedDictionary<Int32, Contrat> Contrats;
+    private System.Data.DataTable dtContrats;
+
     public Collaborateur(String prenom, String nom, String numeroSS, String statut)
     {
         this.PrenomCollabo = prenom;
         this.NomCollabo = nom;
         this.NumeroSS = numeroSS;
         this.StatutCollaborateur = statut;
+        Contrats = new SortedDictionary<Int32, Contrat>();
+        dtContrats = new System.Data.DataTable();
+        dtContrats.Columns.Add("Num Contrat", typeof(Int32));
+        dtContrats.Columns.Add("Qualification", typeof(String));
+        dtContrats.Columns.Add("Statut", typeof(String));
+        dtContrats.Columns.Add("Date Debut", typeof(DateTime));
     }
 
     /// <summary>
@@ -159,10 +169,32 @@ public class Collaborateur
     }
 
 
+    public void Ajouter(Contrat unContrat)
+    {
+        if (Contrats.ContainsKey(unContrat.NumeroContrat) || unContrat.NumeroContrat == 0 )
+        {
+            throw new Exception("Le numero de contrat existe deja ou il est de valeur 0");
+        }
+        else
+        {
+            Contrats.Add(unContrat.NumeroContrat, unContrat);
+        }
+   }
+
+    public void Modifier(Contrat unContrat)
+    {
+        
+    }
+
+    public Contrat Restituer(Int32 numContrat)
+    {
+        return Contrats[numContrat];
+    }
+
     public override String ToString()
     {
         // TODO: implement
-        return null;
+        return "Matricule : " + Matricule + ". Nom : " + NomCollabo + ". Prenom : " + PrenomCollabo;
     }
 
 

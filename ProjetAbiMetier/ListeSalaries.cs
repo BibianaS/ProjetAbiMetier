@@ -8,50 +8,17 @@ using System;
 
 public class ListeSalaries
 {
-   public System.Collections.ArrayList collaborateur;
+   public System.Collections.Generic.List<Collaborateur> listeCollaborateurs;
    
-   /// <pdGenerated>default getter</pdGenerated>
-   public System.Collections.ArrayList GetCollaborateur()
-   {
-      if (collaborateur == null)
-         collaborateur = new System.Collections.ArrayList();
-      return collaborateur;
-   }
+
    
    /// <pdGenerated>default setter</pdGenerated>
-   public void SetCollaborateur(System.Collections.ArrayList newCollaborateur)
+   public void Ajouter (Collaborateur unCOllaborateur)
    {
-      RemoveAllCollaborateur();
-      foreach (Collaborateur oCollaborateur in newCollaborateur)
-         AddCollaborateur(oCollaborateur);
+        listeCollaborateurs.Add(unCOllaborateur);
    }
+
+    public void Modifier(Collaborateur unCollaborateur) { }
    
-   /// <pdGenerated>default Add</pdGenerated>
-   public void AddCollaborateur(Collaborateur newCollaborateur)
-   {
-      if (newCollaborateur == null)
-         return;
-      if (this.collaborateur == null)
-         this.collaborateur = new System.Collections.ArrayList();
-      if (!this.collaborateur.Contains(newCollaborateur))
-         this.collaborateur.Add(newCollaborateur);
-   }
-   
-   /// <pdGenerated>default Remove</pdGenerated>
-   public void RemoveCollaborateur(Collaborateur oldCollaborateur)
-   {
-      if (oldCollaborateur == null)
-         return;
-      if (this.collaborateur != null)
-         if (this.collaborateur.Contains(oldCollaborateur))
-            this.collaborateur.Remove(oldCollaborateur);
-   }
-   
-   /// <pdGenerated>default removeAll</pdGenerated>
-   public void RemoveAllCollaborateur()
-   {
-      if (collaborateur != null)
-         collaborateur.Clear();
-   }
 
 }

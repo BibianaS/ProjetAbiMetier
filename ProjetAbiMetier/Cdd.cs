@@ -8,17 +8,19 @@ using System;
 
 public class Cdd : Temporaire
 {
-   public Cdd(DateTime dateDebut, DateTime dateFin, String qualification, String statut, String motif, Decimal salaireBrut)
-   {
-      // TODO: implement
-   }
-   
-   public override String ToString()
-   {
-      // TODO: implement
-      return null;
-   }
 
-   private Decimal SalaireBrut;
+    public Cdd(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin, String motif) : base(numContrat, qualification, statut, salaireBrut, dateDebut, dateFin, motif)
+    {
+
+    }
+
+
+    public override String ToString()
+   {
+       
+        return base.ToString();
+    }
+
+  
 
 }
