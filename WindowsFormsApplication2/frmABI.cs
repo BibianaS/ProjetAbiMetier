@@ -13,16 +13,12 @@ namespace ABI
 {
     public partial class frmABI : Form
     {
-        public frmABI()
+        MListeCollaborateurs listeCollaborateurs;
+
+        public frmABI(MListeCollaborateurs liste)
         {
             InitializeComponent();
-            //initialisation des collaborateurs en dur
-            init();
-        }
-
-        public void init()
-        {
-            MCollaborateur 
+            this.listeCollaborateurs = liste;
         }
 
         /// <summary>
@@ -30,12 +26,21 @@ namespace ABI
         /// </summary>
         public void afficherCollaborateurs()
         {
-           
+            this.grdCollaborateurs.DataSource =  listeCollaborateurs.ListerCollaborateurs();
+            this.grdCollaborateurs.Refresh();
+            this.btnSupprimer.Enabled = (this.grdCollaborateurs.CurrentRow == null ? false : true);
         }
 
+        /// <summary>
+        /// Methode fermeture du frm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFermer_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+       
     }
 }

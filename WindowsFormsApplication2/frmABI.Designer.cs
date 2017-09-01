@@ -90,8 +90,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView grdCollaborateurs;
-        private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.Button btnFermer;
+        internal System.Windows.Forms.Button btnAjouter;
     }
 }

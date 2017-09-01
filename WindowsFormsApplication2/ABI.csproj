@@ -47,18 +47,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CtrlListerCollaborateurs.cs" />
+    <Compile Include="CtrlNouveauCollaborateur.cs" />
     <Compile Include="Donnees.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmABI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmABI.Designer.cs">
       <DependentUpon>frmABI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAjouterCollaborateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAjouterCollaborateur.Designer.cs">
+      <DependentUpon>frmAjouterCollaborateur.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCollaborateur.cs">
       <SubType>Form</SubType>
@@ -66,31 +67,35 @@
     <Compile Include="frmCollaborateur.Designer.cs">
       <DependentUpon>frmCollaborateur.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMDI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMDI.Designer.cs">
-      <DependentUpon>frmMDI.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmVisuCollaborateur.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmVisuCollaborateur.Designer.cs">
       <DependentUpon>frmVisuCollaborateur.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmABI.resx">
       <DependentUpon>frmABI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAjouterCollaborateur.resx">
+      <DependentUpon>frmAjouterCollaborateur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCollaborateur.resx">
       <DependentUpon>frmCollaborateur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMDI.resx">
-      <DependentUpon>frmMDI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmVisuCollaborateur.resx">
       <DependentUpon>frmVisuCollaborateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

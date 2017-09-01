@@ -1,0 +1,15 @@
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\ABI.csprojResolveAssemblyReference.cache
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\ABI.frmABI.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\ABI.frmCollaborateur.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\ABI.frmVisuCollaborateur.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\ABI.csproj.GenerateResource.Cache
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\bin\Debug\classesMatierAbi.dll
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\bin\Debug\classesMatierAbi.pdb
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.MDIParent1.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.frmAjouterCollaborateur.resources

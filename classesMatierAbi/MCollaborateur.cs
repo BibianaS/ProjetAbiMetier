@@ -12,21 +12,23 @@ namespace ABI
 
     public class MCollaborateur
     {
-        private static Int32 matricule;
+        private Int32 matricule;
         private String prenomCollabo;
         private String nomCollabo;
-        private SByte photoCollabo;
+        private string photoCollabo;
         private String numeroSS;
         private String statutCollaborateur;
         private System.Collections.Generic.SortedDictionary<Int32, MContrat> Contrats;
         private System.Data.DataTable dtContrats;
 
-        public MCollaborateur(String prenom, String nom, String numeroSS, String statut)
+        public MCollaborateur(Int32 Matricule, String prenom, String nom, String numeroSS, String statut)
         {
             this.PrenomCollabo = prenom;
             this.NomCollabo = nom;
             this.NumeroSS = numeroSS;
             this.StatutCollaborateur = statut;
+            this.Matricule = Matricule;
+
             Contrats = new SortedDictionary<Int32, MContrat>();
             dtContrats = new System.Data.DataTable();
             dtContrats.Columns.Add("Num Contrat", typeof(Int32));
@@ -38,13 +40,7 @@ namespace ABI
         /// <summary>
         /// Propriete Matricule
         /// </summary>
-        public int Matricule
-        {
-            get
-            {
-                return Matricule;
-            }
-        }
+      
 
         /// <summary>
         /// Propriete prenom du collaborateur
@@ -91,20 +87,19 @@ namespace ABI
                 }
             }
         }
-
-
-        //public SByte _PhotoCollabo
-        //{
-        //    get
-        //    {
-        //        return PhotoCollabo;
-        //    }
-        //    set
-        //    {
-        //        if (this.PhotoCollabo != value)
-        //            this.PhotoCollabo = value;
-        //    }
-        //}
+        
+        public string PhotoCollabo
+        {
+            get
+            {
+                return photoCollabo;
+            }
+            set
+            {
+                if (this.photoCollabo != value)
+                    this.photoCollabo = value;
+            }
+        }
 
 
         //TODO
@@ -168,6 +163,18 @@ namespace ABI
             }
         }
 
+        public int Matricule
+        {
+            get
+            {
+                return matricule;
+            }
+
+            set
+            {
+                matricule = value;
+            }
+        }
 
         public void Ajouter(MContrat unContrat)
         {
