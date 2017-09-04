@@ -138,13 +138,13 @@
         #endregion
 
         private System.Windows.Forms.Label lblMatricule;
-        private System.Windows.Forms.TextBox txtMatricule;
         private System.Windows.Forms.Label lblPrenom;
-        private System.Windows.Forms.TextBox txtPrenom;
         private System.Windows.Forms.Label lblNom;
-        private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label lblSS;
-        private System.Windows.Forms.TextBox txtSS;
         private System.Windows.Forms.GroupBox gpbCollaborateur;
+        internal System.Windows.Forms.TextBox txtMatricule;
+        internal System.Windows.Forms.TextBox txtPrenom;
+        internal System.Windows.Forms.TextBox txtNom;
+        internal System.Windows.Forms.TextBox txtSS;
     }
 }

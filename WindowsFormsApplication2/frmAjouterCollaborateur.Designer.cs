@@ -38,7 +38,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(181, 321);
+            this.btnOK.Location = new System.Drawing.Point(181, 324);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 8;
@@ -47,20 +47,21 @@
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(260, 321);
+            this.btnAnnuler.Location = new System.Drawing.Point(287, 324);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(75, 23);
             this.btnAnnuler.TabIndex = 9;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // gbxStatut
             // 
             this.gbxStatut.Controls.Add(this.rbrInactif);
             this.gbxStatut.Controls.Add(this.rbtActif);
-            this.gbxStatut.Location = new System.Drawing.Point(51, 236);
+            this.gbxStatut.Location = new System.Drawing.Point(33, 236);
             this.gbxStatut.Name = "gbxStatut";
-            this.gbxStatut.Size = new System.Drawing.Size(284, 54);
+            this.gbxStatut.Size = new System.Drawing.Size(329, 64);
             this.gbxStatut.TabIndex = 10;
             this.gbxStatut.TabStop = false;
             this.gbxStatut.Text = "Statut :";
@@ -68,7 +69,7 @@
             // rbrInactif
             // 
             this.rbrInactif.AutoSize = true;
-            this.rbrInactif.Location = new System.Drawing.Point(195, 19);
+            this.rbrInactif.Location = new System.Drawing.Point(248, 19);
             this.rbrInactif.Name = "rbrInactif";
             this.rbrInactif.Size = new System.Drawing.Size(54, 17);
             this.rbrInactif.TabIndex = 1;
@@ -79,7 +80,7 @@
             // rbtActif
             // 
             this.rbtActif.AutoSize = true;
-            this.rbtActif.Location = new System.Drawing.Point(105, 19);
+            this.rbtActif.Location = new System.Drawing.Point(123, 19);
             this.rbtActif.Name = "rbtActif";
             this.rbtActif.Size = new System.Drawing.Size(46, 17);
             this.rbtActif.TabIndex = 0;
@@ -90,7 +91,7 @@
             // frmAjouterCollaborateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(462, 402);
+            this.ClientSize = new System.Drawing.Size(390, 374);
             this.Controls.Add(this.gbxStatut);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnOK);
@@ -101,16 +102,14 @@
             this.gbxStatut.ResumeLayout(false);
             this.gbxStatut.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.GroupBox gbxStatut;
         private System.Windows.Forms.RadioButton rbrInactif;
         private System.Windows.Forms.RadioButton rbtActif;
+        internal System.Windows.Forms.Button btnOK;
+        internal System.Windows.Forms.Button btnAnnuler;
     }
 }
