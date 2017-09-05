@@ -45,6 +45,15 @@ namespace ABI
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             CtrlNouveauCollaborateur nouvCol = new CtrlNouveauCollaborateur();
+
+            //Si l'instanciation du collaborateur s'est bien passe
+            if(nouvCol.ResultatDialog == System.Windows.Forms.DialogResult.OK)
+            {
+                //Ajouter a la liste de collaborateurs
+                this.listeCol.Ajouter(nouvCol.UnCollaborateur);
+                this.frmAbi.afficherCollaborateurs();
+            }
+
         }
 
     }

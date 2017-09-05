@@ -13,7 +13,6 @@ namespace WindowsFormsApplication2
         frmAjouterCollaborateur frmAjouter;
         private DialogResult resultatDialog;
         private MCollaborateur unCollaborateur;
-        private MListeCollaborateurs listeCollabo;
 
         public MCollaborateur UnCollaborateur
         {
@@ -23,13 +22,26 @@ namespace WindowsFormsApplication2
             }
         }
 
+        public DialogResult ResultatDialog
+        {
+            get
+            {
+                return resultatDialog;
+            }
+
+            set
+            {
+                resultatDialog = value;
+            }
+        }
+
         public CtrlNouveauCollaborateur()
         {
             frmAjouter = new frmAjouterCollaborateur();
             this.frmAjouter.Text = "Ajouter un Nouveau Collaborateur";
             
             this.frmAjouter.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            resultatDialog = this.frmAjouter.ShowDialog();
+            ResultatDialog = this.frmAjouter.ShowDialog();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -39,14 +51,16 @@ namespace WindowsFormsApplication2
                 if (this.frmAjouter.Instancie())
                 {
                     this.frmAjouter.DialogResult = System.Windows.Forms.DialogResult.OK;
-                    this.resultatDialog = this.frmAjouter.DialogResult;
+                    this.ResultatDialog = this.frmAjouter.DialogResult;
+
+                    //recupertation du ref du collaborateur instancie par le form
+                    //afin de l'envoyer au controlleur Lister pour l'ajouter a la liste
                     this.unCollaborateur = this.frmAjouter.NouvCollaborateur;
-                    listeCollabo.Ajouter(this.unCollaborateur);
-                    //MessageBox.Show("Dans l'instanciation");
+                    
                 }
                 else
                 {
-                    this.resultatDialog = DialogResult.No;
+                    this.ResultatDialog = DialogResult.No;
                 }
 
             }

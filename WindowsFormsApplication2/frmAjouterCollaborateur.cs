@@ -14,6 +14,14 @@ namespace WindowsFormsApplication2
 
         MCollaborateur nouvCollaborateur;
 
+        //On a acces au collaborateur pour le recuperer depuis le controleur Ajouter
+        public MCollaborateur NouvCollaborateur
+        {
+            get
+            {
+                return nouvCollaborateur;
+            }
+        }
 
 
         /// <summary>
@@ -24,17 +32,10 @@ namespace WindowsFormsApplication2
             InitializeComponent();
         }
 
-        public MCollaborateur NouvCollaborateur
-        {
-            get
-            {
-                return nouvCollaborateur;
-            }
-        }
+       
 
         internal Boolean Control()
         {
-            MessageBox.Show("Test");
             //code re retour
             Boolean code = true;
 
@@ -84,9 +85,13 @@ namespace WindowsFormsApplication2
             
         }
 
+
+
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+       
     }
 }
