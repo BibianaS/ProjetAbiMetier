@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CtrlListerCollaborateurs.cs" />
+    <Compile Include="CtrlNouvContrat.cs" />
     <Compile Include="CtrlNouveauCollaborateur.cs" />
     <Compile Include="Donnees.cs" />
     <Compile Include="frmABI.cs">
@@ -78,6 +79,12 @@
     </Compile>
     <Compile Include="frmVisuCollaborateur.Designer.cs">
       <DependentUpon>frmVisuCollaborateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisuContrat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisuContrat.Designer.cs">
+      <DependentUpon>frmVisuContrat.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIParent1.cs">
       <SubType>Form</SubType>

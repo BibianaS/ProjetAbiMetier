@@ -49,6 +49,14 @@ namespace ABI
             this.DateDebut = dateDebut;
         }
 
+        public MContrat(Int32 numContrat, String qualification, String statut, DateTime dateDebut, DateTime dateFin)
+        {
+            this.DateFin = dateFin;
+            this.Qualification = qualification;
+            this.Statut = statut;
+            this.DateDebut = dateDebut;
+        }
+
         /// <summary>
         /// Propriete de la qualification
         /// </summary>

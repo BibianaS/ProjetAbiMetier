@@ -14,7 +14,7 @@ namespace ABI
         private String mission = null;
 
         /// <summary>
-        /// Constructeur avec Motif liee au CDD et Interim
+        /// Constructeur avec Motif liee au CDD 
         /// </summary>
         /// <param name="qualification"></param>
         /// <param name="statut"></param>
@@ -23,6 +23,20 @@ namespace ABI
         /// <param name="dateFin"></param>
         /// <param name="motif"></param>
         public MTemporaire(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin, String motif) : base(numContrat, qualification, statut, salaireBrut, dateDebut, dateFin)
+        {
+            this.Motif = motif;
+        }
+
+        /// <summary>
+        /// Constructeur avec Motif liee Interim
+        /// </summary>
+        /// <param name="numContrat"></param>
+        /// <param name="qualification"></param>
+        /// <param name="statut"></param>
+        /// <param name="dateDebut"></param>
+        /// <param name="dateFin"></param>
+        /// <param name="motif"></param>
+        public MTemporaire(Int32 numContrat, String qualification, String statut, DateTime dateDebut, DateTime dateFin, String motif) : base(numContrat, qualification, statut, dateDebut, dateFin)
         {
             this.Motif = motif;
         }

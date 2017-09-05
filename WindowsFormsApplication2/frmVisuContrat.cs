@@ -3,23 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ABI
+namespace WindowsFormsApplication2
 {
-    public partial class frmCollaborateur : Form
+    public partial class frmVisuContrat : WindowsFormsApplication2.frmContrat
     {
-        public frmCollaborateur()
+        public frmVisuContrat()
         {
             InitializeComponent();
-        }
-
-        private void frmCollaborateur_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

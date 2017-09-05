@@ -43,10 +43,13 @@ namespace WindowsFormsApplication2
             
             //Btn OK
             this.frmAjouter.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            ResultatDialog = this.frmAjouter.ShowDialog();
+           
 
             //Btn Ajouter un contrat
             this.frmAjouter.btnAjouterContrat.Click += new System.EventHandler(this.btnAjouterContrat_Click);
+
+
+            ResultatDialog = this.frmAjouter.ShowDialog();
         }
 
 
@@ -69,14 +72,13 @@ namespace WindowsFormsApplication2
                 {
                     this.ResultatDialog = DialogResult.No;
                 }
-
-            }
-            
+            }            
         }
 
         //Gestion du contrat
         private void btnAjouterContrat_Click(object sender, EventArgs e)
         {
+            CtrlNouvContrat nouvContrat = new CtrlNouvContrat();
 
         }
 

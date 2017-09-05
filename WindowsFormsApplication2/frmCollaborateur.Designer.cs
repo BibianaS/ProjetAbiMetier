@@ -129,6 +129,7 @@
             this.Controls.Add(this.gpbCollaborateur);
             this.Name = "frmCollaborateur";
             this.Text = "frmCollaborateur";
+            this.Load += new System.EventHandler(this.frmCollaborateur_Load);
             this.gpbCollaborateur.ResumeLayout(false);
             this.gpbCollaborateur.PerformLayout();
             this.ResumeLayout(false);
