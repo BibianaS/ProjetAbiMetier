@@ -92,6 +92,5 @@ namespace WindowsFormsApplication2
             this.DialogResult = DialogResult.Cancel;
         }
 
-       
     }
 }

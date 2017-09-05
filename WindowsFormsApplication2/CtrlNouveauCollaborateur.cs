@@ -37,13 +37,20 @@ namespace WindowsFormsApplication2
 
         public CtrlNouveauCollaborateur()
         {
+            //Affichag du frm Ajouter
             frmAjouter = new frmAjouterCollaborateur();
             this.frmAjouter.Text = "Ajouter un Nouveau Collaborateur";
             
+            //Btn OK
             this.frmAjouter.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             ResultatDialog = this.frmAjouter.ShowDialog();
+
+            //Btn Ajouter un contrat
+            this.frmAjouter.btnAjouterContrat.Click += new System.EventHandler(this.btnAjouterContrat_Click);
         }
 
+
+        //creation d'un collaborateur
         private void btnOK_Click(object sender, EventArgs e)
         {
             if (this.frmAjouter.Control())
@@ -66,6 +73,12 @@ namespace WindowsFormsApplication2
             }
             
         }
-        
+
+        //Gestion du contrat
+        private void btnAjouterContrat_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
