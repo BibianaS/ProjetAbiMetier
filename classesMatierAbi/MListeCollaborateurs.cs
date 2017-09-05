@@ -33,6 +33,7 @@ namespace ABI
             this.dtCollaborateurs.Columns.Add(new DataColumn(("Matricule"), typeof(System.Int32)));
             this.dtCollaborateurs.Columns.Add(new DataColumn(("Nom"), typeof(System.String)));
             this.dtCollaborateurs.Columns.Add(new DataColumn(("Photo"), typeof(System.String)));
+            this.dtCollaborateurs.Columns.Add(new DataColumn(("Statut"), typeof(System.String)));
         }
 
         /// <summary>
@@ -61,7 +62,7 @@ namespace ABI
             dtCollaborateurs.Clear();
             foreach (MCollaborateur unCollaborateur in this.listeCollaborateurs.Values)
             {
-                dtCollaborateurs.Rows.Add(unCollaborateur.Matricule, unCollaborateur.NomCollabo, unCollaborateur.PhotoCollabo);
+                dtCollaborateurs.Rows.Add(unCollaborateur.Matricule, unCollaborateur.NomCollabo, unCollaborateur.PhotoCollabo, unCollaborateur.StatutCollaborateur);
             }
             return dtCollaborateurs;
         }

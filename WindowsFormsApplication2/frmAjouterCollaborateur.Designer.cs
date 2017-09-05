@@ -73,13 +73,13 @@
             this.rbrInactif.Name = "rbrInactif";
             this.rbrInactif.Size = new System.Drawing.Size(54, 17);
             this.rbrInactif.TabIndex = 1;
-            this.rbrInactif.TabStop = true;
             this.rbrInactif.Text = "Inactif";
             this.rbrInactif.UseVisualStyleBackColor = true;
             // 
             // rbtActif
             // 
             this.rbtActif.AutoSize = true;
+            this.rbtActif.Checked = true;
             this.rbtActif.Location = new System.Drawing.Point(123, 19);
             this.rbtActif.Name = "rbtActif";
             this.rbtActif.Size = new System.Drawing.Size(46, 17);

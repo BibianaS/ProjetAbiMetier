@@ -63,7 +63,7 @@ namespace WindowsFormsApplication2
                         base.txtPrenom.Text,
                         base.txtNom.Text,
                         base.txtSS.Text,
-                        "actif");
+                        "Actif");
                 }
                 else
                 {
@@ -72,7 +72,7 @@ namespace WindowsFormsApplication2
                         base.txtPrenom.Text,
                         base.txtNom.Text,
                         base.txtSS.Text,
-                        "inactif");
+                        "Inactif");
                 }
                 return true;
             }
