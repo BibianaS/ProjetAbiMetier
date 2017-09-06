@@ -20,6 +20,7 @@ namespace ABI
         private String statutCollaborateur;
         private System.Collections.Generic.SortedDictionary<Int32, MContrat> Contrats;
         private System.Data.DataTable dtContrats;
+        private Int32 quantiteContrats = 0;
 
         public MCollaborateur(Int32 Matricule, String prenom, String nom, String numeroSS, String statut)
         {
@@ -176,7 +177,15 @@ namespace ABI
             }
         }
 
-        public void Ajouter(MContrat unContrat)
+        public int QuantiteContrats
+        {
+            get
+            {
+                return quantiteContrats;
+            }
+        }
+
+        public void AjouterContrat(MContrat unContrat)
         {
             if (Contrats.ContainsKey(unContrat.NumeroContrat) || unContrat.NumeroContrat == 0)
             {
@@ -185,17 +194,32 @@ namespace ABI
             else
             {
                 Contrats.Add(unContrat.NumeroContrat, unContrat);
+                quantiteContrats += 1;
             }
         }
-
-        public void Modifier(MContrat unContrat)
+        
+        public void ModifierContrat(MContrat unContrat)
         {
 
         }
 
-        public MContrat Restituer(Int32 numContrat)
+        public MContrat RestituerContrat(Int32 numContrat)
         {
             return Contrats[numContrat];
+        }
+
+        public void AjouterContratListe(MContrat unContrat)
+        {
+             Contrats.Add(unContrat.NumeroContrat, unContrat);
+        }
+
+        public System.Data.DataTable ListerContrats()
+        {
+            foreach(MContrat unContrat in this.Contrats.Values)
+            {
+                dtContrats.Rows.Add(unContrat.NumeroContrat, unContrat.Qualification, unContrat.Statut, unContrat.DateDebut);
+            }
+            return dtContrats;
         }
 
         public override String ToString()
@@ -203,7 +227,5 @@ namespace ABI
             // TODO: implement
             return "Matricule : " + Matricule + ". Nom : " + NomCollabo + ". Prenom : " + PrenomCollabo;
         }
-
-
     }
 }

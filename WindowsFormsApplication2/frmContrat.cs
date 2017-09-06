@@ -13,50 +13,21 @@ namespace WindowsFormsApplication2
 {
     public partial class frmContrat : Form
     {
+        MContrat nouveauContrat;
+
         
-        MInterim nouvInterimaire;
-        MCdd nouveauCdd;
-        MCdi nouveauCDI;
-        MStagiaire nouveauStagiaire;
-
-
-        public MInterim NouvInterimaire
+        public MContrat NouveauContrat
         {
             get
             {
-                return nouvInterimaire;
+                return nouveauContrat;
             }
         }
-
-        public MCdd NouveauCdd
-        {
-            get
-            {
-                return nouveauCdd;
-            }
-        }
-
-        public MCdi NouveauCDI
-        {
-            get
-            {
-                return nouveauCDI;
-            }
-        }
-
-        public MStagiaire NouveauStagiaire
-        {
-            get
-            {
-                return nouveauStagiaire;
-            }
-        }
-
 
         public frmContrat()
         {
            InitializeComponent();
-            init();
+           init();
         }
 
         /// <summary>
@@ -161,17 +132,12 @@ namespace WindowsFormsApplication2
 
         internal Boolean Controle()
         {
-            Boolean code = false;
+            Boolean code = true;
             if (!(Outils.EstEntier(this.txtNumContrat.Text))) // appel fonction générique de contrôle
             {
                 // la chaîne reçue n'est pas convertible
                 code = false;
                 MessageBox.Show("le numero de contrat n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
-            }
-            if (!(Outils.EstEntierAvecVirgule(this.txtNumContrat.Text)))
-            {
-                code = false;
-                MessageBox.Show("Erreur avce la virgule", "ERREUR", MessageBoxButtons.OK);
             }
             return code;
         }
@@ -189,7 +155,7 @@ namespace WindowsFormsApplication2
                 if (this.rbtInterim.Checked)
                 {
                     //Instanciation du contrat Interim
-                    nouvInterimaire = new MInterim(
+                    nouveauContrat = new MInterim(
                         Int32.Parse(txtNumContrat.Text),
                         txtQualification.Text,
                         txtStatut.Text,                        
@@ -203,7 +169,7 @@ namespace WindowsFormsApplication2
                 else if (this.rbtCDD.Checked)
                 {
                     //Instanciation du contrat Interim
-                    nouveauCdd = new MCdd(Int32.Parse(txtNumContrat.Text),
+                    nouveauContrat = new MCdd(Int32.Parse(txtNumContrat.Text),
                         txtQualification.Text,
                         txtStatut.Text,
                         Decimal.Parse(txtSalaireBrut.Text),
@@ -214,7 +180,7 @@ namespace WindowsFormsApplication2
                 else if (this.rbtStage.Checked)
                 {
                     //Instanciation du contrat Interim
-                    nouveauStagiaire = new MStagiaire(
+                    nouveauContrat = new MStagiaire(
                         Int32.Parse(txtNumContrat.Text),
                         txtQualification.Text,
                         txtStatut.Text,
@@ -226,7 +192,7 @@ namespace WindowsFormsApplication2
                 }
                 else
                 {
-                    nouveauCDI = new MCdi(
+                    nouveauContrat = new MCdi(
                         Int32.Parse(txtNumContrat.Text),
                         txtQualification.Text,
                         txtStatut.Text,
@@ -238,15 +204,23 @@ namespace WindowsFormsApplication2
             }
             catch (Exception ex)
             {
-                nouvInterimaire = null;
+                nouveauContrat = null;
                 MessageBox.Show("Erreur : \n" +ex.Message, "Ajout d'un contrat interim");
                 return false;
             }
 
         }
 
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblDateFin_Click(object sender, EventArgs e)
+        {
 
 
 
+        }
     }
 }

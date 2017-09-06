@@ -174,6 +174,7 @@
             this.lblDateFin.Size = new System.Drawing.Size(56, 13);
             this.lblDateFin.TabIndex = 7;
             this.lblDateFin.Text = "Date fint : ";
+            this.lblDateFin.Click += new System.EventHandler(this.lblDateFin_Click);
             // 
             // dateTimeFin
             // 
@@ -295,6 +296,7 @@
             this.btnAnnuler.TabIndex = 22;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // lblNumContrat
             // 
@@ -343,7 +345,7 @@
             this.Controls.Add(this.dateTimeDebut);
             this.Controls.Add(this.lblDateDebut);
             this.Name = "frmContrat";
-            this.Text = "Nouveau contrat";
+            this.Text = "+";
             this.gpbTypeContrat.ResumeLayout(false);
             this.gpbTypeContrat.PerformLayout();
             this.ResumeLayout(false);
@@ -370,7 +372,6 @@
         private System.Windows.Forms.Label lblIndemnisation;
         private System.Windows.Forms.Label lblEcole;
         private System.Windows.Forms.Label lblMission;
-        private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnAnnuler;
         internal System.Windows.Forms.TextBox txtSalaireBrut;
         internal System.Windows.Forms.TextBox txtMotif;
@@ -382,5 +383,6 @@
         internal System.Windows.Forms.TextBox txtStatut;
         private System.Windows.Forms.Label lblNumContrat;
         internal System.Windows.Forms.TextBox txtNumContrat;
+        internal System.Windows.Forms.Button btnOK;
     }
 }

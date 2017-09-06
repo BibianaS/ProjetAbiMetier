@@ -66,7 +66,5 @@ namespace ABI
             }
             return dtCollaborateurs;
         }
-
-
     }
 }

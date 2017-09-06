@@ -40,6 +40,7 @@ namespace ABI
             //Collaborateur essaie
             MCollaborateur collab2 = new MCollaborateur(75965, "Roberto", "Carlos", "123", "actif");
             this.listeCol.Ajouter(collab2);
+
         }
 
         private void btnAjouter_Click(object sender, EventArgs e)
@@ -53,8 +54,6 @@ namespace ABI
                 this.listeCol.Ajouter(nouvCol.UnCollaborateur);
                 this.frmAbi.afficherCollaborateurs();
             }
-
         }
-
     }
 }

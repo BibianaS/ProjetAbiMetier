@@ -13,6 +13,8 @@ namespace WindowsFormsApplication2
     {
 
         MCollaborateur nouvCollaborateur;
+    
+
 
         //On a acces au collaborateur pour le recuperer depuis le controleur Ajouter
         public MCollaborateur NouvCollaborateur
@@ -30,9 +32,19 @@ namespace WindowsFormsApplication2
         public frmAjouterCollaborateur()
         {
             InitializeComponent();
+            init();
         }
-
        
+
+        public void init()
+        {
+            if (this.NouvCollaborateur.QuantiteContrats != 0)
+            {
+                listerContrats();
+            }
+                
+            
+        }
 
         internal Boolean Control()
         {
@@ -56,6 +68,7 @@ namespace WindowsFormsApplication2
             //Creation d'une refernece d'objet Collaborateur
             try
             {
+               
                 if (this.rbtActif.Checked)
                 {
                     nouvCollaborateur = new MCollaborateur(
@@ -85,7 +98,11 @@ namespace WindowsFormsApplication2
             
         }
 
-
+        private void listerContrats()
+        {                        
+                this.grvListeContrats.DataSource = nouvCollaborateur.ListerContrats();
+                this.grvListeContrats.Refresh();
+        }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
         {

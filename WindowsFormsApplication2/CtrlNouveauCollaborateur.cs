@@ -5,8 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication2;
 
-namespace WindowsFormsApplication2
+namespace ABI
 {
     class CtrlNouveauCollaborateur
     {
@@ -27,29 +28,24 @@ namespace WindowsFormsApplication2
             get
             {
                 return resultatDialog;
-            }
-
-            set
-            {
-                resultatDialog = value;
-            }
+            }           
         }
+
+
 
         public CtrlNouveauCollaborateur()
         {
             //Affichag du frm Ajouter
             frmAjouter = new frmAjouterCollaborateur();
             this.frmAjouter.Text = "Ajouter un Nouveau Collaborateur";
-            
-            //Btn OK
-            this.frmAjouter.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-           
-
+                        
             //Btn Ajouter un contrat
             this.frmAjouter.btnAjouterContrat.Click += new System.EventHandler(this.btnAjouterContrat_Click);
 
+            //Btn OK
+            this.frmAjouter.btnOK.Click += new System.EventHandler(this.btnOK_Click);
 
-            ResultatDialog = this.frmAjouter.ShowDialog();
+            resultatDialog = this.frmAjouter.ShowDialog();
         }
 
 
@@ -61,7 +57,7 @@ namespace WindowsFormsApplication2
                 if (this.frmAjouter.Instancie())
                 {
                     this.frmAjouter.DialogResult = System.Windows.Forms.DialogResult.OK;
-                    this.ResultatDialog = this.frmAjouter.DialogResult;
+                    this.resultatDialog = this.frmAjouter.DialogResult;
 
                     //recupertation du ref du collaborateur instancie par le form
                     //afin de l'envoyer au controlleur Lister pour l'ajouter a la liste
@@ -70,7 +66,7 @@ namespace WindowsFormsApplication2
                 }
                 else
                 {
-                    this.ResultatDialog = DialogResult.No;
+                    this.resultatDialog = DialogResult.No;
                 }
             }            
         }
@@ -79,7 +75,6 @@ namespace WindowsFormsApplication2
         private void btnAjouterContrat_Click(object sender, EventArgs e)
         {
             CtrlNouvContrat nouvContrat = new CtrlNouvContrat();
-
         }
 
     }
