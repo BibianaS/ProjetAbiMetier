@@ -23,6 +23,7 @@ namespace ABI
             frmAbi.Show();
             this.frmAbi.afficherCollaborateurs();
             this.frmAbi.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
+            this.frmAbi.grdCollaborateurs.DoubleClick += new System.EventHandler(this.grdCollaborateurs_DoubleClick);
         }
 
         /// <summary>
@@ -54,6 +55,15 @@ namespace ABI
                 this.listeCol.Ajouter(nouvCol.UnCollaborateur);
                 this.frmAbi.afficherCollaborateurs();
             }
+        }
+
+
+        private void grdCollaborateurs_DoubleClick(object sender, EventArgs e)
+        {
+            Int32 cleCollaborateur;
+            cleCollaborateur = (Int32)this.frmAbi.grdCollaborateurs.CurrentRow.Cells[0].Value;
+ 
+            //TODO / RECUPERER LE COLLABORATEUR POUR LE VISUALISER         
         }
     }
 }

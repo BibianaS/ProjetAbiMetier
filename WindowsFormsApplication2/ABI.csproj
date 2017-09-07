@@ -74,11 +74,11 @@
     <Compile Include="frmContrat.Designer.cs">
       <DependentUpon>frmContrat.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVisuCollaborateur.cs">
+    <Compile Include="frmVIsuCollaborateur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVisuCollaborateur.Designer.cs">
-      <DependentUpon>frmVisuCollaborateur.cs</DependentUpon>
+    <Compile Include="frmVIsuCollaborateur.Designer.cs">
+      <DependentUpon>frmVIsuCollaborateur.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVisuContrat.cs">
       <SubType>Form</SubType>
@@ -107,8 +107,8 @@
     <EmbeddedResource Include="frmContrat.resx">
       <DependentUpon>frmContrat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVisuCollaborateur.resx">
-      <DependentUpon>frmVisuCollaborateur.cs</DependentUpon>
+    <EmbeddedResource Include="frmVIsuCollaborateur.resx">
+      <DependentUpon>frmVIsuCollaborateur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>

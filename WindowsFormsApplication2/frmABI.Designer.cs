@@ -81,17 +81,16 @@
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.grdCollaborateurs);
             this.Name = "frmABI";
-            this.Text = "frmABI";
+            this.Text = "Lister les Collaborateurs";
             ((System.ComponentModel.ISupportInitialize)(this.grdCollaborateurs)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView grdCollaborateurs;
         private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.Button btnFermer;
         internal System.Windows.Forms.Button btnAjouter;
+        internal System.Windows.Forms.DataGridView grdCollaborateurs;
     }
 }

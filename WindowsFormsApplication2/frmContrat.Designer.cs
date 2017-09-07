@@ -66,7 +66,7 @@
             this.lblDateDebut.Location = new System.Drawing.Point(12, 138);
             this.lblDateDebut.Name = "lblDateDebut";
             this.lblDateDebut.Size = new System.Drawing.Size(69, 13);
-            this.lblDateDebut.TabIndex = 0;
+            this.lblDateDebut.TabIndex = 18;
             this.lblDateDebut.Text = "Date debut : ";
             // 
             // dateTimeDebut
@@ -74,7 +74,7 @@
             this.dateTimeDebut.Location = new System.Drawing.Point(134, 131);
             this.dateTimeDebut.Name = "dateTimeDebut";
             this.dateTimeDebut.Size = new System.Drawing.Size(200, 20);
-            this.dateTimeDebut.TabIndex = 1;
+            this.dateTimeDebut.TabIndex = 5;
             // 
             // lblQualification
             // 
@@ -82,7 +82,7 @@
             this.lblQualification.Location = new System.Drawing.Point(12, 208);
             this.lblQualification.Name = "lblQualification";
             this.lblQualification.Size = new System.Drawing.Size(71, 13);
-            this.lblQualification.TabIndex = 2;
+            this.lblQualification.TabIndex = 20;
             this.lblQualification.Text = "Qualification :";
             // 
             // txtQualification
@@ -90,7 +90,7 @@
             this.txtQualification.Location = new System.Drawing.Point(134, 201);
             this.txtQualification.Name = "txtQualification";
             this.txtQualification.Size = new System.Drawing.Size(148, 20);
-            this.txtQualification.TabIndex = 3;
+            this.txtQualification.TabIndex = 7;
             // 
             // lblStatut
             // 
@@ -98,7 +98,7 @@
             this.lblStatut.Location = new System.Drawing.Point(12, 246);
             this.lblStatut.Name = "lblStatut";
             this.lblStatut.Size = new System.Drawing.Size(41, 13);
-            this.lblStatut.TabIndex = 4;
+            this.lblStatut.TabIndex = 21;
             this.lblStatut.Text = "Statut :";
             // 
             // txtStatut
@@ -106,7 +106,7 @@
             this.txtStatut.Location = new System.Drawing.Point(134, 239);
             this.txtStatut.Name = "txtStatut";
             this.txtStatut.Size = new System.Drawing.Size(148, 20);
-            this.txtStatut.TabIndex = 5;
+            this.txtStatut.TabIndex = 8;
             // 
             // gpbTypeContrat
             // 
@@ -127,7 +127,7 @@
             this.rbtInterim.Location = new System.Drawing.Point(23, 34);
             this.rbtInterim.Name = "rbtInterim";
             this.rbtInterim.Size = new System.Drawing.Size(56, 17);
-            this.rbtInterim.TabIndex = 3;
+            this.rbtInterim.TabIndex = 1;
             this.rbtInterim.Text = "Interim";
             this.rbtInterim.UseVisualStyleBackColor = true;
             this.rbtInterim.CheckedChanged += new System.EventHandler(this.rbtInterim_CheckedChanged);
@@ -138,7 +138,7 @@
             this.rbtStage.Location = new System.Drawing.Point(171, 34);
             this.rbtStage.Name = "rbtStage";
             this.rbtStage.Size = new System.Drawing.Size(53, 17);
-            this.rbtStage.TabIndex = 2;
+            this.rbtStage.TabIndex = 3;
             this.rbtStage.Text = "Stage";
             this.rbtStage.UseVisualStyleBackColor = true;
             this.rbtStage.CheckedChanged += new System.EventHandler(this.rbtStage_CheckedChanged);
@@ -149,7 +149,7 @@
             this.rbtCDD.Location = new System.Drawing.Point(101, 34);
             this.rbtCDD.Name = "rbtCDD";
             this.rbtCDD.Size = new System.Drawing.Size(48, 17);
-            this.rbtCDD.TabIndex = 1;
+            this.rbtCDD.TabIndex = 2;
             this.rbtCDD.Text = "CDD";
             this.rbtCDD.UseVisualStyleBackColor = true;
             this.rbtCDD.CheckedChanged += new System.EventHandler(this.rbtCDD_CheckedChanged);
@@ -161,7 +161,7 @@
             this.rbtCDI.Location = new System.Drawing.Point(242, 34);
             this.rbtCDI.Name = "rbtCDI";
             this.rbtCDI.Size = new System.Drawing.Size(43, 17);
-            this.rbtCDI.TabIndex = 0;
+            this.rbtCDI.TabIndex = 4;
             this.rbtCDI.TabStop = true;
             this.rbtCDI.Text = "CDI";
             this.rbtCDI.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@
             this.lblDateFin.Location = new System.Drawing.Point(12, 169);
             this.lblDateFin.Name = "lblDateFin";
             this.lblDateFin.Size = new System.Drawing.Size(56, 13);
-            this.lblDateFin.TabIndex = 7;
+            this.lblDateFin.TabIndex = 19;
             this.lblDateFin.Text = "Date fint : ";
             this.lblDateFin.Click += new System.EventHandler(this.lblDateFin_Click);
             // 
@@ -181,7 +181,7 @@
             this.dateTimeFin.Location = new System.Drawing.Point(134, 163);
             this.dateTimeFin.Name = "dateTimeFin";
             this.dateTimeFin.Size = new System.Drawing.Size(200, 20);
-            this.dateTimeFin.TabIndex = 8;
+            this.dateTimeFin.TabIndex = 6;
             // 
             // lblSalaireBrut
             // 
@@ -189,7 +189,7 @@
             this.lblSalaireBrut.Location = new System.Drawing.Point(12, 284);
             this.lblSalaireBrut.Name = "lblSalaireBrut";
             this.lblSalaireBrut.Size = new System.Drawing.Size(66, 13);
-            this.lblSalaireBrut.TabIndex = 9;
+            this.lblSalaireBrut.TabIndex = 22;
             this.lblSalaireBrut.Text = "Salaire brut :";
             // 
             // lblMotif
@@ -198,7 +198,7 @@
             this.lblMotif.Location = new System.Drawing.Point(12, 323);
             this.lblMotif.Name = "lblMotif";
             this.lblMotif.Size = new System.Drawing.Size(36, 13);
-            this.lblMotif.TabIndex = 10;
+            this.lblMotif.TabIndex = 23;
             this.lblMotif.Text = "Motif :";
             // 
             // txtSalaireBrut
@@ -206,14 +206,14 @@
             this.txtSalaireBrut.Location = new System.Drawing.Point(134, 277);
             this.txtSalaireBrut.Name = "txtSalaireBrut";
             this.txtSalaireBrut.Size = new System.Drawing.Size(148, 20);
-            this.txtSalaireBrut.TabIndex = 11;
+            this.txtSalaireBrut.TabIndex = 9;
             // 
             // txtMotif
             // 
             this.txtMotif.Location = new System.Drawing.Point(134, 316);
             this.txtMotif.Name = "txtMotif";
             this.txtMotif.Size = new System.Drawing.Size(148, 20);
-            this.txtMotif.TabIndex = 12;
+            this.txtMotif.TabIndex = 10;
             // 
             // lblAgenceInterim
             // 
@@ -221,7 +221,7 @@
             this.lblAgenceInterim.Location = new System.Drawing.Point(12, 362);
             this.lblAgenceInterim.Name = "lblAgenceInterim";
             this.lblAgenceInterim.Size = new System.Drawing.Size(83, 13);
-            this.lblAgenceInterim.TabIndex = 13;
+            this.lblAgenceInterim.TabIndex = 24;
             this.lblAgenceInterim.Text = "Agence interim :";
             // 
             // txtAgence
@@ -229,7 +229,7 @@
             this.txtAgence.Location = new System.Drawing.Point(134, 355);
             this.txtAgence.Name = "txtAgence";
             this.txtAgence.Size = new System.Drawing.Size(148, 20);
-            this.txtAgence.TabIndex = 14;
+            this.txtAgence.TabIndex = 11;
             // 
             // lblIndemnisation
             // 
@@ -237,7 +237,7 @@
             this.lblIndemnisation.Location = new System.Drawing.Point(12, 405);
             this.lblIndemnisation.Name = "lblIndemnisation";
             this.lblIndemnisation.Size = new System.Drawing.Size(78, 13);
-            this.lblIndemnisation.TabIndex = 15;
+            this.lblIndemnisation.TabIndex = 25;
             this.lblIndemnisation.Text = "Indemnisation :";
             // 
             // txtIndemnisation
@@ -245,7 +245,7 @@
             this.txtIndemnisation.Location = new System.Drawing.Point(134, 398);
             this.txtIndemnisation.Name = "txtIndemnisation";
             this.txtIndemnisation.Size = new System.Drawing.Size(148, 20);
-            this.txtIndemnisation.TabIndex = 16;
+            this.txtIndemnisation.TabIndex = 12;
             // 
             // lblEcole
             // 
@@ -253,7 +253,7 @@
             this.lblEcole.Location = new System.Drawing.Point(12, 439);
             this.lblEcole.Name = "lblEcole";
             this.lblEcole.Size = new System.Drawing.Size(40, 13);
-            this.lblEcole.TabIndex = 17;
+            this.lblEcole.TabIndex = 26;
             this.lblEcole.Text = "Ecole :";
             // 
             // lblMission
@@ -262,7 +262,7 @@
             this.lblMission.Location = new System.Drawing.Point(12, 480);
             this.lblMission.Name = "lblMission";
             this.lblMission.Size = new System.Drawing.Size(48, 13);
-            this.lblMission.TabIndex = 18;
+            this.lblMission.TabIndex = 27;
             this.lblMission.Text = "Mission :";
             // 
             // txtMission
@@ -270,21 +270,21 @@
             this.txtMission.Location = new System.Drawing.Point(134, 475);
             this.txtMission.Name = "txtMission";
             this.txtMission.Size = new System.Drawing.Size(148, 20);
-            this.txtMission.TabIndex = 19;
+            this.txtMission.TabIndex = 14;
             // 
             // txtEcole
             // 
             this.txtEcole.Location = new System.Drawing.Point(134, 436);
             this.txtEcole.Name = "txtEcole";
             this.txtEcole.Size = new System.Drawing.Size(148, 20);
-            this.txtEcole.TabIndex = 20;
+            this.txtEcole.TabIndex = 13;
             // 
             // btnOK
             // 
             this.btnOK.Location = new System.Drawing.Point(161, 542);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 21;
+            this.btnOK.TabIndex = 15;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
@@ -293,7 +293,7 @@
             this.btnAnnuler.Location = new System.Drawing.Point(259, 542);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(75, 23);
-            this.btnAnnuler.TabIndex = 22;
+            this.btnAnnuler.TabIndex = 16;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
@@ -304,7 +304,7 @@
             this.lblNumContrat.Location = new System.Drawing.Point(12, 19);
             this.lblNumContrat.Name = "lblNumContrat";
             this.lblNumContrat.Size = new System.Drawing.Size(90, 13);
-            this.lblNumContrat.TabIndex = 23;
+            this.lblNumContrat.TabIndex = 17;
             this.lblNumContrat.Text = "Contrat Numero : ";
             // 
             // txtNumContrat
@@ -312,7 +312,7 @@
             this.txtNumContrat.Location = new System.Drawing.Point(134, 12);
             this.txtNumContrat.Name = "txtNumContrat";
             this.txtNumContrat.Size = new System.Drawing.Size(148, 20);
-            this.txtNumContrat.TabIndex = 24;
+            this.txtNumContrat.TabIndex = 0;
             // 
             // frmContrat
             // 
@@ -345,7 +345,7 @@
             this.Controls.Add(this.dateTimeDebut);
             this.Controls.Add(this.lblDateDebut);
             this.Name = "frmContrat";
-            this.Text = "+";
+            this.Text = "Ajouter un contrat";
             this.gpbTypeContrat.ResumeLayout(false);
             this.gpbTypeContrat.PerformLayout();
             this.ResumeLayout(false);

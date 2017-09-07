@@ -12,10 +12,7 @@ namespace WindowsFormsApplication2
     public partial class frmAjouterCollaborateur : ABI.frmCollaborateur
     {
 
-        MCollaborateur nouvCollaborateur;
-    
-
-
+        MCollaborateur nouvCollaborateur;    
         //On a acces au collaborateur pour le recuperer depuis le controleur Ajouter
         public MCollaborateur NouvCollaborateur
         {
@@ -32,20 +29,8 @@ namespace WindowsFormsApplication2
         public frmAjouterCollaborateur()
         {
             InitializeComponent();
-            init();
         }
-       
-
-        public void init()
-        {
-            if (this.NouvCollaborateur.QuantiteContrats != 0)
-            {
-                listerContrats();
-            }
-                
-            
-        }
-
+              
         internal Boolean Control()
         {
             //code re retour
@@ -98,12 +83,7 @@ namespace WindowsFormsApplication2
             
         }
 
-        private void listerContrats()
-        {                        
-                this.grvListeContrats.DataSource = nouvCollaborateur.ListerContrats();
-                this.grvListeContrats.Refresh();
-        }
-
+       
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

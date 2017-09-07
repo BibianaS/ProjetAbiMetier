@@ -14,7 +14,6 @@ namespace WindowsFormsApplication2
     public partial class frmContrat : Form
     {
         MContrat nouveauContrat;
-
         
         public MContrat NouveauContrat
         {

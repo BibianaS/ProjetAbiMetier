@@ -48,5 +48,13 @@ namespace ABI
                 return resultat;
             }
         }
+
+        public MContrat NouveauContrat
+        {
+            get
+            {
+                return nouveauContrat;
+            }
+        }
     }
 }

@@ -35,11 +35,8 @@
             this.rbtActif = new System.Windows.Forms.RadioButton();
             this.btnAjouterContrat = new System.Windows.Forms.Button();
             this.gpbContrats = new System.Windows.Forms.GroupBox();
-            this.grvListeContrats = new System.Windows.Forms.DataGridView();
-            this.lblListeContrats = new System.Windows.Forms.Label();
             this.gbxStatut.SuspendLayout();
             this.gpbContrats.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvListeContrats)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOK
@@ -113,47 +110,24 @@
             this.gpbContrats.TabStop = false;
             this.gpbContrats.Text = "Contrats :";
             // 
-            // grvListeContrats
-            // 
-            this.grvListeContrats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvListeContrats.Location = new System.Drawing.Point(391, 76);
-            this.grvListeContrats.Name = "grvListeContrats";
-            this.grvListeContrats.Size = new System.Drawing.Size(339, 280);
-            this.grvListeContrats.TabIndex = 13;
-            // 
-            // lblListeContrats
-            // 
-            this.lblListeContrats.AutoSize = true;
-            this.lblListeContrats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblListeContrats.Location = new System.Drawing.Point(388, 44);
-            this.lblListeContrats.Name = "lblListeContrats";
-            this.lblListeContrats.Size = new System.Drawing.Size(138, 20);
-            this.lblListeContrats.TabIndex = 14;
-            this.lblListeContrats.Text = "Liste de Contrats :";
-            // 
             // frmAjouterCollaborateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(742, 417);
-            this.Controls.Add(this.lblListeContrats);
-            this.Controls.Add(this.grvListeContrats);
+            this.ClientSize = new System.Drawing.Size(383, 417);
             this.Controls.Add(this.gpbContrats);
             this.Controls.Add(this.gbxStatut);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnOK);
             this.Name = "frmAjouterCollaborateur";
+            this.Text = "Ajouter un Collaborateur";
             this.Controls.SetChildIndex(this.btnOK, 0);
             this.Controls.SetChildIndex(this.btnAnnuler, 0);
             this.Controls.SetChildIndex(this.gbxStatut, 0);
             this.Controls.SetChildIndex(this.gpbContrats, 0);
-            this.Controls.SetChildIndex(this.grvListeContrats, 0);
-            this.Controls.SetChildIndex(this.lblListeContrats, 0);
             this.gbxStatut.ResumeLayout(false);
             this.gbxStatut.PerformLayout();
             this.gpbContrats.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grvListeContrats)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -165,7 +139,5 @@
         internal System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.GroupBox gpbContrats;
         internal System.Windows.Forms.Button btnAjouterContrat;
-        private System.Windows.Forms.DataGridView grvListeContrats;
-        private System.Windows.Forms.Label lblListeContrats;
     }
 }

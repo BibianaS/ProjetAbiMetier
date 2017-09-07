@@ -39,11 +39,6 @@ namespace ABI
         }
 
         /// <summary>
-        /// Propriete Matricule
-        /// </summary>
-      
-
-        /// <summary>
         /// Propriete prenom du collaborateur
         /// </summary>
 
@@ -214,13 +209,13 @@ namespace ABI
         }
 
         public System.Data.DataTable ListerContrats()
-        {
-            foreach(MContrat unContrat in this.Contrats.Values)
-            {
-                dtContrats.Rows.Add(unContrat.NumeroContrat, unContrat.Qualification, unContrat.Statut, unContrat.DateDebut);
-            }
-            return dtContrats;
-        }
+        {            
+                foreach (MContrat unContrat in this.Contrats.Values)
+                {
+                    this.dtContrats.Rows.Add(unContrat.NumeroContrat, unContrat.Qualification, unContrat.Statut, unContrat.DateDebut);
+                }
+                return this.dtContrats;
+         }
 
         public override String ToString()
         {

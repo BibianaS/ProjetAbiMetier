@@ -41,6 +41,5 @@ namespace ABI
             this.Close();
         }
 
-       
     }
 }

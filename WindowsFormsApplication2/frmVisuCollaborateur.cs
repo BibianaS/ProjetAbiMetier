@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ABI
+namespace WindowsFormsApplication2
 {
-    public partial class frmVisuCollaborateur : ABI.frmCollaborateur
+    public partial class frmVIsuCollaborateur : ABI.frmCollaborateur
     {
-        public frmVisuCollaborateur()
+        public frmVIsuCollaborateur()
         {
             InitializeComponent();
         }

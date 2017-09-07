@@ -66,5 +66,20 @@ namespace ABI
             }
             return dtCollaborateurs;
         }
+
+        public MCollaborateur RestituerCollaborateur(Int32 cle)
+        {
+            MCollaborateur unCollaborateur;
+            unCollaborateur = this.listeCollaborateurs[cle] as MCollaborateur;
+            if(unCollaborateur == null)
+            {
+                throw new Exception("Aucun collaborateur avec cette Matricule");
+            }
+            else
+            {
+                return unCollaborateur;
+            }
+
+        }
     }
 }
