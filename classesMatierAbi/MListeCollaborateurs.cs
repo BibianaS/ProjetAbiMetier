@@ -51,6 +51,8 @@ namespace ABI
         /// <param name="unCollaborateur"></param>
         public void Modifier(MCollaborateur unCollaborateur)
         {
+            this.listeCollaborateurs.Remove(unCollaborateur.Matricule);
+            this.listeCollaborateurs.Add(unCollaborateur.Matricule, unCollaborateur);
         }
 
         /// <summary>

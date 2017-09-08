@@ -10,6 +10,7 @@ namespace ABI
     class CtrlListerCollaborateurs
     {
         private MListeCollaborateurs listeCol;
+        private MCollaborateur monCollabo;
         frmABI frmAbi;
         /// <summary>
         /// constructeur controleur liste collaborateurs
@@ -62,8 +63,9 @@ namespace ABI
         {
             Int32 cleCollaborateur;
             cleCollaborateur = (Int32)this.frmAbi.grdCollaborateurs.CurrentRow.Cells[0].Value;
- 
-            //TODO / RECUPERER LE COLLABORATEUR POUR LE VISUALISER         
+            monCollabo = listeCol.RestituerCollaborateur(cleCollaborateur);
+            ctrlVisuModifCollaborateur ctrlFrmVisu = new ctrlVisuModifCollaborateur(monCollabo);
+
         }
     }
 }

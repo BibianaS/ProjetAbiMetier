@@ -46,7 +46,7 @@ namespace ABI
         {
             get
             {
-                return this.PrenomCollabo;
+                return this.prenomCollabo;
             }
             set
             {

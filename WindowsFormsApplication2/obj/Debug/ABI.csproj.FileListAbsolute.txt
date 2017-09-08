@@ -13,4 +13,4 @@ C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\
 C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.MDIParent1.resources
 C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.frmAjouterCollaborateur.resources
 C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.frmContrat.resources
-C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.frmVIsuCollaborateur.resources
+C:\Users\DL-CDI\Desktop\AbiMetiers\ProjetAbiMetier\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.frmModification.resources

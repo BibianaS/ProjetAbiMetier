@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication2
 {
-    partial class frmVIsuCollaborateur
+    partial class frmModification
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -42,13 +42,13 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(369, 52);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(420, 186);
+            this.dataGridView1.Size = new System.Drawing.Size(420, 212);
             this.dataGridView1.TabIndex = 9;
             // 
             // lblAfficheStatut
             // 
             this.lblAfficheStatut.AutoSize = true;
-            this.lblAfficheStatut.Location = new System.Drawing.Point(66, 268);
+            this.lblAfficheStatut.Location = new System.Drawing.Point(63, 241);
             this.lblAfficheStatut.Name = "lblAfficheStatut";
             this.lblAfficheStatut.Size = new System.Drawing.Size(41, 13);
             this.lblAfficheStatut.TabIndex = 10;
@@ -57,14 +57,14 @@
             // lblStatut
             // 
             this.lblStatut.AutoSize = true;
-            this.lblStatut.Location = new System.Drawing.Point(184, 269);
+            this.lblStatut.Location = new System.Drawing.Point(153, 241);
             this.lblStatut.Name = "lblStatut";
             this.lblStatut.Size = new System.Drawing.Size(0, 13);
             this.lblStatut.TabIndex = 11;
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(287, 281);
+            this.btnModifier.Location = new System.Drawing.Point(622, 321);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(75, 23);
             this.btnModifier.TabIndex = 12;
@@ -82,7 +82,7 @@
             // 
             // btnRevenir
             // 
-            this.btnRevenir.Location = new System.Drawing.Point(368, 281);
+            this.btnRevenir.Location = new System.Drawing.Point(714, 321);
             this.btnRevenir.Name = "btnRevenir";
             this.btnRevenir.Size = new System.Drawing.Size(75, 23);
             this.btnRevenir.TabIndex = 15;
@@ -118,8 +118,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblAfficheStatut;
         private System.Windows.Forms.Label lblStatut;
-        private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.Label lblListeContrats;
         private System.Windows.Forms.Button btnRevenir;
+        internal System.Windows.Forms.Button btnModifier;
     }
 }
