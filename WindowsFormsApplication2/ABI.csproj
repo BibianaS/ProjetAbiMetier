@@ -49,6 +49,7 @@
     <Compile Include="CtrlListerCollaborateurs.cs" />
     <Compile Include="CtrlNouvContrat.cs" />
     <Compile Include="CtrlNouveauCollaborateur.cs" />
+    <Compile Include="CtrlVisuContrat.cs" />
     <Compile Include="ctrlVisuModifCollaborateur.cs" />
     <Compile Include="Donnees.cs" />
     <Compile Include="frmABI.cs">

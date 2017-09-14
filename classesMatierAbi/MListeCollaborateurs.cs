@@ -32,9 +32,9 @@ namespace ABI
             //Colonnes de la datatTable de collaborateurs
             this.dtCollaborateurs.Columns.Add(new DataColumn(("Matricule"), typeof(System.Int32)));
             this.dtCollaborateurs.Columns.Add(new DataColumn(("Nom"), typeof(System.String)));
-            this.dtCollaborateurs.Columns.Add(new DataColumn(("Photo"), typeof(System.String)));
-            this.dtCollaborateurs.Columns.Add(new DataColumn(("Statut"), typeof(System.String)));
-        }
+            this.dtCollaborateurs.Columns.Add(new DataColumn(("Prenom"), typeof(System.String)));
+            this.dtCollaborateurs.Columns.Add(new DataColumn(("Numero SS"), typeof(System.String)));
+         }
 
         /// <summary>
      /// Ajouter un collaborateur a la liste
@@ -51,8 +51,7 @@ namespace ABI
         /// <param name="unCollaborateur"></param>
         public void Modifier(MCollaborateur unCollaborateur)
         {
-            this.listeCollaborateurs.Remove(unCollaborateur.Matricule);
-            this.listeCollaborateurs.Add(unCollaborateur.Matricule, unCollaborateur);
+            this.listeCollaborateurs[unCollaborateur.Matricule] = unCollaborateur;
         }
 
         /// <summary>
@@ -64,11 +63,10 @@ namespace ABI
             dtCollaborateurs.Clear();
             foreach (MCollaborateur unCollaborateur in this.listeCollaborateurs.Values)
             {
-                dtCollaborateurs.Rows.Add(unCollaborateur.Matricule, unCollaborateur.NomCollabo, unCollaborateur.PhotoCollabo, unCollaborateur.StatutCollaborateur);
+                dtCollaborateurs.Rows.Add(unCollaborateur.Matricule, unCollaborateur.NomCollabo, unCollaborateur.PrenomCollabo, unCollaborateur.NumeroSS);
             }
             return dtCollaborateurs;
         }
-
         public MCollaborateur RestituerCollaborateur(Int32 cle)
         {
             MCollaborateur unCollaborateur;

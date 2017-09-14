@@ -12,7 +12,7 @@ namespace WindowsFormsApplication2
 {
     public partial class frmModification : ABI.frmCollaborateur
     {
-        MCollaborateur monCollabo;
+        private MCollaborateur monCollabo;
         public frmModification(MCollaborateur unCollabo)
         {
             InitializeComponent();
@@ -26,24 +26,31 @@ namespace WindowsFormsApplication2
             this.txtPrenom.Text = monCollabo.PrenomCollabo;
             this.txtNom.Text = monCollabo.NomCollabo;
             this.txtSS.Text = monCollabo.NumeroSS;
-            this.lblStatut.Text = monCollabo.StatutCollaborateur;
+
+            this.grdContrats.DataSource = monCollabo.ListerContrats();
+        }
+               
+        internal void ModifCollaborateur()
+        {
+            try
+            {
+                this.monCollabo.Matricule = Int32.Parse(txtMatricule.Text);
+                this.monCollabo.PrenomCollabo = txtPrenom.Text;
+                this.monCollabo.NomCollabo = txtNom.Text;
+                this.monCollabo.NumeroSS = txtSS.Text;
+                this.DialogResult = DialogResult.OK;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erreur : \n" + ex.Message, "Modification Collaborateur");
+            }            
         }
 
-        private void btnRevenir_Click(object sender, EventArgs e)
+        private void btnRevenir_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        public MCollaborateur ModifCollaborateur()
-        {
-            monCollabo.Matricule = Int32.Parse(txtMatricule.Text);
-            monCollabo.PrenomCollabo = txtPrenom.Text;
-            monCollabo.NomCollabo = txtNom.Text;
-            monCollabo.NumeroSS = txtSS.Text;
 
-            return monCollabo;
-        }
-
-        
     }
 }

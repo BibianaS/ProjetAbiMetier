@@ -11,7 +11,7 @@ namespace ABI
     class CtrlNouvContrat
     {
         private frmContrat frmNouvContrat;
-        private MContrat nouveauContrat;
+        private MContrat leContrat;
         private DialogResult resultat;
 
         public CtrlNouvContrat()
@@ -20,8 +20,10 @@ namespace ABI
 
             this.frmNouvContrat.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             resultat = this.frmNouvContrat.ShowDialog();
-        }
 
+            //en fin de dialogue recuperer la ref de l'objet
+            this.leContrat = frmNouvContrat.NouveauContrat;
+        }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
@@ -31,7 +33,6 @@ namespace ABI
                 {
                     frmNouvContrat.DialogResult = DialogResult.OK;
                     this.resultat = DialogResult.OK;
-                    this.nouveauContrat = frmNouvContrat.NouveauContrat;
                 }
                 else
                 {
@@ -39,7 +40,6 @@ namespace ABI
                 }
             }
         }
-
 
         public DialogResult Resultat
         {
@@ -49,11 +49,12 @@ namespace ABI
             }
         }
 
-        public MContrat NouveauContrat
+        //Accesseur à la ref du contrat
+        public MContrat LeContrat
         {
             get
             {
-                return nouveauContrat;
+                return this.leContrat;
             }
         }
     }

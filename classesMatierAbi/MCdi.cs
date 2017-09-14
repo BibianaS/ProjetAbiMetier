@@ -8,8 +8,6 @@ using System;
 
 namespace ABI
 {
-
-
     public class MCdi : MContrat
     {
         /// <summary>
@@ -20,7 +18,7 @@ namespace ABI
         /// <param name="salaireBrut"></param>
         /// <param name="dateDebut"></param>
         /// <param name="dateFin"></param>
-        public MCdi(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin) : base(numContrat, qualification, statut, salaireBrut, dateDebut, dateFin)
+        public MCdi(Int32 numContrat, String qualification, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin) : base(numContrat, qualification, salaireBrut, dateDebut, dateFin)
         {
         }
 
@@ -31,7 +29,7 @@ namespace ABI
         /// <param name="statut"></param>
         /// <param name="salaireBrut"></param>
         /// <param name="dateFin"></param>
-        public MCdi(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateFin) : base(numContrat, qualification, statut, salaireBrut, dateFin)
+        public MCdi(Int32 numContrat, String qualification, Decimal salaireBrut, DateTime dateFin) : base(numContrat, qualification, salaireBrut, dateFin)
         {
         }
 

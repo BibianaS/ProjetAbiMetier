@@ -11,8 +11,7 @@ namespace WindowsFormsApplication2
 {
     public partial class frmAjouterCollaborateur : ABI.frmCollaborateur
     {
-
-        MCollaborateur nouvCollaborateur;    
+        MCollaborateur nouvCollaborateur;
         //On a acces au collaborateur pour le recuperer depuis le controleur Ajouter
         public MCollaborateur NouvCollaborateur
         {
@@ -22,7 +21,6 @@ namespace WindowsFormsApplication2
             }
         }
 
-
         /// <summary>
         /// Constructeur
         /// </summary>
@@ -30,7 +28,7 @@ namespace WindowsFormsApplication2
         {
             InitializeComponent();
         }
-              
+
         internal Boolean Control()
         {
             //code re retour
@@ -53,41 +51,25 @@ namespace WindowsFormsApplication2
             //Creation d'une refernece d'objet Collaborateur
             try
             {
-               
-                if (this.rbtActif.Checked)
-                {
-                    nouvCollaborateur = new MCollaborateur(
+                nouvCollaborateur = new MCollaborateur(
                         Int32.Parse(base.txtMatricule.Text.Trim()),
                         base.txtPrenom.Text,
                         base.txtNom.Text,
-                        base.txtSS.Text,
-                        "Actif");
-                }
-                else
-                {
-                    nouvCollaborateur = new MCollaborateur(
-                        Int32.Parse(base.txtMatricule.Text.Trim()),
-                        base.txtPrenom.Text,
-                        base.txtNom.Text,
-                        base.txtSS.Text,
-                        "Inactif");
-                }
+                        base.txtSS.Text);
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 nouvCollaborateur = null;
-                MessageBox.Show("Erreur : \n" +ex.Message, "Ajout collaborateur");
+                MessageBox.Show("Erreur : \n" + ex.Message, "Ajout collaborateur");
                 return false;
             }
-            
+
         }
 
-       
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
         }
-
     }
 }

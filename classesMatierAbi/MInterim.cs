@@ -12,8 +12,7 @@ namespace ABI
         private String agenceInterim;
         private Decimal indemnitesInterim;
 
-
-        public MInterim(Int32 numContrat, String qualification, String statut, DateTime dateDebut, DateTime dateFin, String motif, String agence, Decimal indemnites) : base(numContrat, qualification, statut, dateDebut, dateFin, motif)
+        public MInterim(Int32 numContrat, String qualification, DateTime dateDebut, DateTime dateFin, String motif, String agence, Decimal indemnites) : base(numContrat, qualification, dateDebut, dateFin, motif)
         {
             this.AgenceInterim = agence;
             this.IndemnitesInterim = indemnites;

@@ -12,6 +12,7 @@ namespace ABI
     {
         private String motif = null;
         private String mission = null;
+        
 
         /// <summary>
         /// Constructeur avec Motif liee au CDD 
@@ -22,7 +23,7 @@ namespace ABI
         /// <param name="dateDebut"></param>
         /// <param name="dateFin"></param>
         /// <param name="motif"></param>
-        public MTemporaire(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin, String motif) : base(numContrat, qualification, statut, salaireBrut, dateDebut, dateFin)
+        public MTemporaire(Int32 numContrat, String qualification, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin, String motif) : base(numContrat, qualification, salaireBrut, dateDebut, dateFin)
         {
             this.Motif = motif;
         }
@@ -36,7 +37,7 @@ namespace ABI
         /// <param name="dateDebut"></param>
         /// <param name="dateFin"></param>
         /// <param name="motif"></param>
-        public MTemporaire(Int32 numContrat, String qualification, String statut, DateTime dateDebut, DateTime dateFin, String motif) : base(numContrat, qualification, statut, dateDebut, dateFin)
+        public MTemporaire(Int32 numContrat, String qualification,  DateTime dateDebut, DateTime dateFin, String motif) : base(numContrat, qualification, dateDebut, dateFin)
         {
             this.Motif = motif;
         }
@@ -50,7 +51,7 @@ namespace ABI
         /// <param name="mission"></param>
         /// <param name="dateDebut"></param>
         /// <param name="dateFin"></param>
-        public MTemporaire(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, String mission, DateTime dateDebut, DateTime dateFin) : base(numContrat, qualification, statut, salaireBrut, dateDebut, dateFin)
+        public MTemporaire(Int32 numContrat, String qualification,  Decimal salaireBrut, String mission, DateTime dateDebut, DateTime dateFin) : base(numContrat, qualification, salaireBrut, dateDebut, dateFin)
         {
             this.Mission = mission;
         }
@@ -65,7 +66,7 @@ namespace ABI
         /// <param name="dateFin"></param>
         /// <param name="mission"></param>
         /// <param name="motif"></param>
-        public MTemporaire(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin, String mission, String motif) : base(numContrat, qualification, statut, salaireBrut, dateDebut, dateFin)
+        public MTemporaire(Int32 numContrat, String qualification,  Decimal salaireBrut, DateTime dateDebut, DateTime dateFin, String mission, String motif) : base(numContrat, qualification, salaireBrut, dateDebut, dateFin)
         {
             this.Mission = mission;
             this.Motif = motif;

@@ -17,17 +17,14 @@ namespace ABI
         private String nomCollabo;
         private string photoCollabo;
         private String numeroSS;
-        private String statutCollaborateur;
         private System.Collections.Generic.SortedDictionary<Int32, MContrat> Contrats;
         private System.Data.DataTable dtContrats;
-        private Int32 quantiteContrats = 0;
 
-        public MCollaborateur(Int32 Matricule, String prenom, String nom, String numeroSS, String statut)
+        public MCollaborateur(Int32 Matricule, String prenom, String nom, String numeroSS)
         {
             this.PrenomCollabo = prenom;
             this.NomCollabo = nom;
             this.NumeroSS = numeroSS;
-            this.StatutCollaborateur = statut;
             this.Matricule = Matricule;
 
             Contrats = new SortedDictionary<Int32, MContrat>();
@@ -83,7 +80,7 @@ namespace ABI
                 }
             }
         }
-        
+
         public string PhotoCollabo
         {
             get
@@ -96,8 +93,7 @@ namespace ABI
                     this.photoCollabo = value;
             }
         }
-
-
+        
         //TODO
         //CHANGER LE NOMBRE DE NUMEROS A 13
 
@@ -147,17 +143,7 @@ namespace ABI
         /// Propriete qui define le statud d'un commaborateur
         /// Actif ou inactif
         /// </summary>
-        public String StatutCollaborateur
-        {
-            get
-            {
-                return statutCollaborateur;
-            }
-            set
-            {
-                this.statutCollaborateur = value;
-            }
-        }
+    
 
         public int Matricule
         {
@@ -172,51 +158,51 @@ namespace ABI
             }
         }
 
-        public int QuantiteContrats
-        {
-            get
-            {
-                return quantiteContrats;
-            }
-        }
-
+      
+        /// <summary>
+        /// Ajoute un contrat à la collection
+        /// </summary>
+        /// <param name="unContrat"></param>
         public void AjouterContrat(MContrat unContrat)
         {
-            if (Contrats.ContainsKey(unContrat.NumeroContrat) || unContrat.NumeroContrat == 0)
+            //MContrat monCOntrat = unContrat;
+            if (Contrats.ContainsKey(unContrat.NumeroContrat))
             {
                 throw new Exception("Le numero de contrat existe deja ou il est de valeur 0");
             }
             else
             {
                 Contrats.Add(unContrat.NumeroContrat, unContrat);
-                quantiteContrats += 1;
             }
         }
-        
+
         public void ModifierContrat(MContrat unContrat)
         {
 
         }
 
+        /// <summary>
+        /// Methode qui cherche un contrat dans la collection et le retourne
+        /// </summary>
+        /// <param name="numContrat"></param>
+        /// <returns></returns>
         public MContrat RestituerContrat(Int32 numContrat)
         {
             return Contrats[numContrat];
         }
 
-        public void AjouterContratListe(MContrat unContrat)
-        {
-             Contrats.Add(unContrat.NumeroContrat, unContrat);
-        }
-
+        /// <summary>
+        /// Datat table qui recupere la collection de contrats
+        /// </summary>
+        /// <returns></returns>
         public System.Data.DataTable ListerContrats()
-        {            
-                foreach (MContrat unContrat in this.Contrats.Values)
-                {
-                    this.dtContrats.Rows.Add(unContrat.NumeroContrat, unContrat.Qualification, unContrat.Statut, unContrat.DateDebut);
-                }
-                return this.dtContrats;
-         }
-
+        {
+            foreach (MContrat unContrat in this.Contrats.Values)
+            {
+                this.dtContrats.Rows.Add(unContrat.NumeroContrat, unContrat.Qualification, unContrat.Statut, unContrat.DateDebut);
+            }
+            return this.dtContrats;
+        }
         public override String ToString()
         {
             // TODO: implement

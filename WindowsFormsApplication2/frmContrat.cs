@@ -14,12 +14,26 @@ namespace WindowsFormsApplication2
     public partial class frmContrat : Form
     {
         MContrat nouveauContrat;
+        private String type = "CDI";
         
         public MContrat NouveauContrat
         {
             get
             {
                 return nouveauContrat;
+            }
+        }
+
+        public string Type
+        {
+            get
+            {
+                return type;
+            }
+
+            set
+            {
+                type = value;
             }
         }
 
@@ -153,11 +167,11 @@ namespace WindowsFormsApplication2
                 //Instanciation contrat interim
                 if (this.rbtInterim.Checked)
                 {
+                    this.type = "Interim"; 
                     //Instanciation du contrat Interim
                     nouveauContrat = new MInterim(
                         Int32.Parse(txtNumContrat.Text),
                         txtQualification.Text,
-                        txtStatut.Text,                        
                         dateTimeDebut.Value.Date,
                         dateTimeFin.Value.Date,
                         txtMotif.Text,
@@ -167,10 +181,10 @@ namespace WindowsFormsApplication2
                 //Instanciation contrat interim
                 else if (this.rbtCDD.Checked)
                 {
+                    this.type = "CDD";
                     //Instanciation du contrat Interim
                     nouveauContrat = new MCdd(Int32.Parse(txtNumContrat.Text),
                         txtQualification.Text,
-                        txtStatut.Text,
                         Decimal.Parse(txtSalaireBrut.Text),
                         dateTimeDebut.Value.Date,
                         dateTimeFin.Value.Date,
@@ -178,11 +192,11 @@ namespace WindowsFormsApplication2
                 }
                 else if (this.rbtStage.Checked)
                 {
+                    this.type = "Stage";
                     //Instanciation du contrat Interim
                     nouveauContrat = new MStagiaire(
                         Int32.Parse(txtNumContrat.Text),
                         txtQualification.Text,
-                        txtStatut.Text,
                         Decimal.Parse(txtSalaireBrut.Text),
                         txtMission.Text,
                         dateTimeDebut.Value.Date,
@@ -191,10 +205,10 @@ namespace WindowsFormsApplication2
                 }
                 else
                 {
+                    this.type = "CDI";
                     nouveauContrat = new MCdi(
                         Int32.Parse(txtNumContrat.Text),
                         txtQualification.Text,
-                        txtStatut.Text,
                         Decimal.Parse(txtSalaireBrut.Text),
                         dateTimeDebut.Value.Date
                         );
@@ -217,9 +231,6 @@ namespace WindowsFormsApplication2
 
         private void lblDateFin_Click(object sender, EventArgs e)
         {
-
-
-
         }
     }
 }

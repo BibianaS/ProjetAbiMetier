@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grdContrats = new System.Windows.Forms.DataGridView();
             this.lblAfficheStatut = new System.Windows.Forms.Label();
             this.lblStatut = new System.Windows.Forms.Label();
             this.btnModifier = new System.Windows.Forms.Button();
             this.lblListeContrats = new System.Windows.Forms.Label();
             this.btnRevenir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdContrats)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // grdContrats
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(369, 52);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(420, 212);
-            this.dataGridView1.TabIndex = 9;
+            this.grdContrats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdContrats.Location = new System.Drawing.Point(369, 52);
+            this.grdContrats.Name = "grdContrats";
+            this.grdContrats.Size = new System.Drawing.Size(420, 212);
+            this.grdContrats.TabIndex = 9;
+//            this.grdContrats.DoubleClick += new System.EventHandler(this.grdContrats_DoubleClick);
             // 
             // lblAfficheStatut
             // 
@@ -64,7 +65,7 @@
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(622, 321);
+            this.btnModifier.Location = new System.Drawing.Point(633, 270);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(75, 23);
             this.btnModifier.TabIndex = 12;
@@ -82,44 +83,44 @@
             // 
             // btnRevenir
             // 
-            this.btnRevenir.Location = new System.Drawing.Point(714, 321);
+            this.btnRevenir.Location = new System.Drawing.Point(714, 270);
             this.btnRevenir.Name = "btnRevenir";
             this.btnRevenir.Size = new System.Drawing.Size(75, 23);
             this.btnRevenir.TabIndex = 15;
             this.btnRevenir.Text = "Revenir";
             this.btnRevenir.UseVisualStyleBackColor = true;
+            this.btnRevenir.Click += new System.EventHandler(this.btnRevenir_Click_1);
             // 
-            // frmVIsuCollaborateur
+            // frmModification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(801, 356);
+            this.ClientSize = new System.Drawing.Size(800, 302);
             this.Controls.Add(this.btnRevenir);
             this.Controls.Add(this.lblListeContrats);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.lblStatut);
             this.Controls.Add(this.lblAfficheStatut);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "frmVIsuCollaborateur";
+            this.Controls.Add(this.grdContrats);
+            this.Name = "frmModification";
             this.Text = "VIsualidation - mofication d\'un COllaborateur";
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.grdContrats, 0);
             this.Controls.SetChildIndex(this.lblAfficheStatut, 0);
             this.Controls.SetChildIndex(this.lblStatut, 0);
             this.Controls.SetChildIndex(this.btnModifier, 0);
             this.Controls.SetChildIndex(this.lblListeContrats, 0);
             this.Controls.SetChildIndex(this.btnRevenir, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdContrats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblAfficheStatut;
         private System.Windows.Forms.Label lblStatut;
         private System.Windows.Forms.Label lblListeContrats;
         private System.Windows.Forms.Button btnRevenir;
         internal System.Windows.Forms.Button btnModifier;
+        internal System.Windows.Forms.DataGridView grdContrats;
     }
 }

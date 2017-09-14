@@ -37,10 +37,10 @@ namespace ABI
             this.listeCol = new MListeCollaborateurs();
             
             //Collaborateur essaie
-            MCollaborateur collab1 = new MCollaborateur(32569,"thomas", "Depuis", "896", "actif");
+            MCollaborateur collab1 = new MCollaborateur(32569,"thomas", "Depuis", "896");
             this.listeCol.Ajouter(collab1);
             //Collaborateur essaie
-            MCollaborateur collab2 = new MCollaborateur(75965, "Roberto", "Carlos", "123", "actif");
+            MCollaborateur collab2 = new MCollaborateur(75965, "Roberto", "Carlos", "123");
             this.listeCol.Ajouter(collab2);
 
         }
@@ -58,14 +58,13 @@ namespace ABI
             }
         }
 
-
         private void grdCollaborateurs_DoubleClick(object sender, EventArgs e)
         {
             Int32 cleCollaborateur;
             cleCollaborateur = (Int32)this.frmAbi.grdCollaborateurs.CurrentRow.Cells[0].Value;
             monCollabo = listeCol.RestituerCollaborateur(cleCollaborateur);
             ctrlVisuModifCollaborateur ctrlFrmVisu = new ctrlVisuModifCollaborateur(monCollabo);
-
+            this.frmAbi.afficherCollaborateurs();
         }
     }
 }

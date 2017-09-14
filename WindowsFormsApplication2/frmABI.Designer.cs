@@ -30,7 +30,6 @@
         {
             this.grdCollaborateurs = new System.Windows.Forms.DataGridView();
             this.btnAjouter = new System.Windows.Forms.Button();
-            this.btnSupprimer = new System.Windows.Forms.Button();
             this.btnFermer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdCollaborateurs)).BeginInit();
             this.SuspendLayout();
@@ -45,21 +44,12 @@
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(280, 280);
+            this.btnAjouter.Location = new System.Drawing.Point(361, 280);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(75, 23);
             this.btnAjouter.TabIndex = 1;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
-            // 
-            // btnSupprimer
-            // 
-            this.btnSupprimer.Location = new System.Drawing.Point(361, 280);
-            this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Size = new System.Drawing.Size(75, 23);
-            this.btnSupprimer.TabIndex = 2;
-            this.btnSupprimer.Text = "Supprimer";
-            this.btnSupprimer.UseVisualStyleBackColor = true;
             // 
             // btnFermer
             // 
@@ -77,7 +67,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 314);
             this.Controls.Add(this.btnFermer);
-            this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.grdCollaborateurs);
             this.Name = "frmABI";
@@ -88,7 +77,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.Button btnFermer;
         internal System.Windows.Forms.Button btnAjouter;
         internal System.Windows.Forms.DataGridView grdCollaborateurs;

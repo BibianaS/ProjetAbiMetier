@@ -9,13 +9,12 @@ namespace ABI
 {
     public abstract class MContrat
     {
-
-        DateTime dateDebut;
-        DateTime dateFin;
         private Int32 numeroContrat;
         private String qualification;
         private String statut;
         private Decimal salaireBrut;
+        DateTime dateDebut;
+        DateTime dateFin;
 
         /// <summary>
         /// Constructeur avec date debut et fin de contrat
@@ -24,14 +23,14 @@ namespace ABI
         /// <param name="statut"></param>
         /// <param name="salaireBrut"></param>
         /// <param name="dateDebut"></param>
-        public MContrat(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin)
+        public MContrat(Int32 numContrat, String qualification, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin)
         {
             this.NumeroContrat = numContrat;
             this.Qualification = qualification;
-            this.Statut = statut;
             this.SalaireBrut = salaireBrut;
             this.DateDebut = dateDebut;
             this.DateFin = dateFin;
+            this.statut = valStatut(dateDebut, dateFin);
         }
 
         /// <summary>
@@ -41,20 +40,38 @@ namespace ABI
         /// <param name="statut"></param>
         /// <param name="salaireBrut"></param>
         /// <param name="dateDebut"></param>
-        public MContrat(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut)
+        public MContrat(Int32 numContrat, String qualification, Decimal salaireBrut, DateTime dateDebut)
         {
+            this.NumeroContrat = numContrat;
             this.Qualification = qualification;
-            this.Statut = statut;
             this.SalaireBrut = salaireBrut;
             this.DateDebut = dateDebut;
+            this.statut = valStatut(dateDebut, dateFin);
         }
 
-        public MContrat(Int32 numContrat, String qualification, String statut, DateTime dateDebut, DateTime dateFin)
+        public MContrat(Int32 numContrat, String qualification, DateTime dateDebut, DateTime dateFin)
         {
+            this.NumeroContrat = numContrat;
             this.DateFin = dateFin;
             this.Qualification = qualification;
-            this.Statut = statut;
             this.DateDebut = dateDebut;
+            this.statut = valStatut(dateDebut, dateFin);
+        }
+
+        /// <summary>
+        /// Propriete du numero de contrat
+        /// </summary>
+        public Int32 NumeroContrat
+        {
+            get
+            {
+                return this.numeroContrat;
+            }
+
+            set
+            {
+                this.numeroContrat = value;
+            }
         }
 
         /// <summary>
@@ -68,7 +85,7 @@ namespace ABI
             }
             set
             {
-
+                this.qualification = value;
             }
         }
 
@@ -83,9 +100,21 @@ namespace ABI
             }
             set
             {
+                statut = value;
             }
         }
-
+        private String valStatut(DateTime dateDebut, DateTime dateFin)
+        {
+            if (DateFin >= DateTime.Today)
+            {
+                statut = "Actif";
+            }
+            else
+            {
+                statut = "Inactif";
+            }
+            return Statut;
+        }
         /// <summary>
         /// Propriete de la date de debut du contrat
         /// </summary>
@@ -99,12 +128,12 @@ namespace ABI
             set
             {
 
-                Int32 result = DateTime.Compare(value, DateTime.Now);
-                if (result > 0)
+                Int32 result = DateTime.Compare(value, DateTime.Today);
+                if (result <= 0)
                 {
                     throw new Exception("Merci de reinseigner une date future");
                 }
-                if (result <= 0)
+                if (result > 0)
                 {
                     this.dateDebut = value;
                 }
@@ -152,19 +181,6 @@ namespace ABI
                 {
                     throw new Exception("Verifier la date de debut et fin de contrat");
                 }
-            }
-        }
-
-        public Int32 NumeroContrat
-        {
-            get
-            {
-                return numeroContrat;
-            }
-
-            set
-            {
-                numeroContrat = value;
             }
         }
 

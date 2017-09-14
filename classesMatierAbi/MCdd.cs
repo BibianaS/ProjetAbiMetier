@@ -9,13 +9,11 @@ namespace ABI
 {
     public class MCdd : MTemporaire
     {
-
-        public MCdd(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, DateTime dateDebut, DateTime dateFin, String motif) : base(numContrat, qualification, statut, salaireBrut, dateDebut, dateFin, motif)
+        public MCdd(Int32 numContrat, String qualification,  Decimal salaireBrut, DateTime dateDebut, DateTime dateFin, String motif) : base(numContrat, qualification, salaireBrut, dateDebut, dateFin, motif)
         {
 
         }
-
-
+        
         public override String ToString()
         {
 

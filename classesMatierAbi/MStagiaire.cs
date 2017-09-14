@@ -9,11 +9,9 @@ namespace ABI
 {
     public class MStagiaire : MTemporaire
     {
-
-
         private String ecole;
 
-        public MStagiaire(Int32 numContrat, String qualification, String statut, Decimal salaireBrut, String mission, DateTime dateDebut, DateTime dateFin, String ecole) : base(numContrat, qualification, statut, salaireBrut, mission, dateDebut, dateFin)
+        public MStagiaire(Int32 numContrat, String qualification, Decimal salaireBrut, String mission, DateTime dateDebut, DateTime dateFin, String ecole) : base(numContrat, qualification, salaireBrut, mission, dateDebut, dateFin)
         {
             this.Ecole = ecole;
         }

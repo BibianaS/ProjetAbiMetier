@@ -10,24 +10,29 @@ namespace WindowsFormsApplication2
     class ctrlVisuModifCollaborateur
     {
         MCollaborateur monCollaborateur;
-        MCollaborateur colModifie;
-        MListeCollaborateurs maListe;
         frmModification frmModif;
+               
         public ctrlVisuModifCollaborateur(MCollaborateur unCollaborateur)
         {
             this.monCollaborateur = unCollaborateur;
             frmModif = new frmModification(this.monCollaborateur);
             this.frmModif.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
+            this.frmModif.grdContrats.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdContrats_DoubleClick);
             frmModif.ShowDialog();
         }
+
         private void btnModifier_Click(object sender, EventArgs e)
         {
-
-            colModifie = frmModif.ModifCollaborateur();
-            maListe.Modifier(colModifie);
-            //TODO finit d'enregistrer les modif, faut'il appelelr les methodes ici? 
-
+            frmModif.ModifCollaborateur();
         }
 
+        private void grdContrats_DoubleClick(object sender, EventArgs e)
+        {
+            MContrat unContrat; 
+            Int32 cle;
+            cle = (Int32)this.frmModif.grdContrats.CurrentRow.Cells[0].Value;
+            unContrat = monCollaborateur.RestituerContrat(cle);
+            CtrlVisuContrat ctrlContrat = new CtrlVisuContrat(unContrat); 
+        }
     }
 }

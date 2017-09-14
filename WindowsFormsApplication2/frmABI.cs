@@ -28,7 +28,6 @@ namespace ABI
         {
             this.grdCollaborateurs.DataSource =  listeCollaborateurs.ListerCollaborateurs();
             this.grdCollaborateurs.Refresh();
-            this.btnSupprimer.Enabled = (this.grdCollaborateurs.CurrentRow == null ? false : true);
         }
 
         /// <summary>

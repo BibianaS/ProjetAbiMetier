@@ -32,8 +32,6 @@
             this.dateTimeDebut = new System.Windows.Forms.DateTimePicker();
             this.lblQualification = new System.Windows.Forms.Label();
             this.txtQualification = new System.Windows.Forms.TextBox();
-            this.lblStatut = new System.Windows.Forms.Label();
-            this.txtStatut = new System.Windows.Forms.TextBox();
             this.gpbTypeContrat = new System.Windows.Forms.GroupBox();
             this.rbtInterim = new System.Windows.Forms.RadioButton();
             this.rbtStage = new System.Windows.Forms.RadioButton();
@@ -43,7 +41,6 @@
             this.dateTimeFin = new System.Windows.Forms.DateTimePicker();
             this.lblSalaireBrut = new System.Windows.Forms.Label();
             this.lblMotif = new System.Windows.Forms.Label();
-            this.txtSalaireBrut = new System.Windows.Forms.TextBox();
             this.txtMotif = new System.Windows.Forms.TextBox();
             this.lblAgenceInterim = new System.Windows.Forms.Label();
             this.txtAgence = new System.Windows.Forms.TextBox();
@@ -57,6 +54,7 @@
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.lblNumContrat = new System.Windows.Forms.Label();
             this.txtNumContrat = new System.Windows.Forms.TextBox();
+            this.txtSalaireBrut = new System.Windows.Forms.TextBox();
             this.gpbTypeContrat.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,22 +89,6 @@
             this.txtQualification.Name = "txtQualification";
             this.txtQualification.Size = new System.Drawing.Size(148, 20);
             this.txtQualification.TabIndex = 7;
-            // 
-            // lblStatut
-            // 
-            this.lblStatut.AutoSize = true;
-            this.lblStatut.Location = new System.Drawing.Point(12, 246);
-            this.lblStatut.Name = "lblStatut";
-            this.lblStatut.Size = new System.Drawing.Size(41, 13);
-            this.lblStatut.TabIndex = 21;
-            this.lblStatut.Text = "Statut :";
-            // 
-            // txtStatut
-            // 
-            this.txtStatut.Location = new System.Drawing.Point(134, 239);
-            this.txtStatut.Name = "txtStatut";
-            this.txtStatut.Size = new System.Drawing.Size(148, 20);
-            this.txtStatut.TabIndex = 8;
             // 
             // gpbTypeContrat
             // 
@@ -186,7 +168,7 @@
             // lblSalaireBrut
             // 
             this.lblSalaireBrut.AutoSize = true;
-            this.lblSalaireBrut.Location = new System.Drawing.Point(12, 284);
+            this.lblSalaireBrut.Location = new System.Drawing.Point(12, 247);
             this.lblSalaireBrut.Name = "lblSalaireBrut";
             this.lblSalaireBrut.Size = new System.Drawing.Size(66, 13);
             this.lblSalaireBrut.TabIndex = 22;
@@ -195,22 +177,15 @@
             // lblMotif
             // 
             this.lblMotif.AutoSize = true;
-            this.lblMotif.Location = new System.Drawing.Point(12, 323);
+            this.lblMotif.Location = new System.Drawing.Point(12, 286);
             this.lblMotif.Name = "lblMotif";
             this.lblMotif.Size = new System.Drawing.Size(36, 13);
             this.lblMotif.TabIndex = 23;
             this.lblMotif.Text = "Motif :";
             // 
-            // txtSalaireBrut
-            // 
-            this.txtSalaireBrut.Location = new System.Drawing.Point(134, 277);
-            this.txtSalaireBrut.Name = "txtSalaireBrut";
-            this.txtSalaireBrut.Size = new System.Drawing.Size(148, 20);
-            this.txtSalaireBrut.TabIndex = 9;
-            // 
             // txtMotif
             // 
-            this.txtMotif.Location = new System.Drawing.Point(134, 316);
+            this.txtMotif.Location = new System.Drawing.Point(134, 279);
             this.txtMotif.Name = "txtMotif";
             this.txtMotif.Size = new System.Drawing.Size(148, 20);
             this.txtMotif.TabIndex = 10;
@@ -218,7 +193,7 @@
             // lblAgenceInterim
             // 
             this.lblAgenceInterim.AutoSize = true;
-            this.lblAgenceInterim.Location = new System.Drawing.Point(12, 362);
+            this.lblAgenceInterim.Location = new System.Drawing.Point(12, 325);
             this.lblAgenceInterim.Name = "lblAgenceInterim";
             this.lblAgenceInterim.Size = new System.Drawing.Size(83, 13);
             this.lblAgenceInterim.TabIndex = 24;
@@ -226,7 +201,7 @@
             // 
             // txtAgence
             // 
-            this.txtAgence.Location = new System.Drawing.Point(134, 355);
+            this.txtAgence.Location = new System.Drawing.Point(134, 318);
             this.txtAgence.Name = "txtAgence";
             this.txtAgence.Size = new System.Drawing.Size(148, 20);
             this.txtAgence.TabIndex = 11;
@@ -234,7 +209,7 @@
             // lblIndemnisation
             // 
             this.lblIndemnisation.AutoSize = true;
-            this.lblIndemnisation.Location = new System.Drawing.Point(12, 405);
+            this.lblIndemnisation.Location = new System.Drawing.Point(12, 368);
             this.lblIndemnisation.Name = "lblIndemnisation";
             this.lblIndemnisation.Size = new System.Drawing.Size(78, 13);
             this.lblIndemnisation.TabIndex = 25;
@@ -242,7 +217,7 @@
             // 
             // txtIndemnisation
             // 
-            this.txtIndemnisation.Location = new System.Drawing.Point(134, 398);
+            this.txtIndemnisation.Location = new System.Drawing.Point(134, 361);
             this.txtIndemnisation.Name = "txtIndemnisation";
             this.txtIndemnisation.Size = new System.Drawing.Size(148, 20);
             this.txtIndemnisation.TabIndex = 12;
@@ -250,7 +225,7 @@
             // lblEcole
             // 
             this.lblEcole.AutoSize = true;
-            this.lblEcole.Location = new System.Drawing.Point(12, 439);
+            this.lblEcole.Location = new System.Drawing.Point(12, 402);
             this.lblEcole.Name = "lblEcole";
             this.lblEcole.Size = new System.Drawing.Size(40, 13);
             this.lblEcole.TabIndex = 26;
@@ -259,7 +234,7 @@
             // lblMission
             // 
             this.lblMission.AutoSize = true;
-            this.lblMission.Location = new System.Drawing.Point(12, 480);
+            this.lblMission.Location = new System.Drawing.Point(12, 443);
             this.lblMission.Name = "lblMission";
             this.lblMission.Size = new System.Drawing.Size(48, 13);
             this.lblMission.TabIndex = 27;
@@ -267,21 +242,21 @@
             // 
             // txtMission
             // 
-            this.txtMission.Location = new System.Drawing.Point(134, 475);
+            this.txtMission.Location = new System.Drawing.Point(134, 438);
             this.txtMission.Name = "txtMission";
             this.txtMission.Size = new System.Drawing.Size(148, 20);
             this.txtMission.TabIndex = 14;
             // 
             // txtEcole
             // 
-            this.txtEcole.Location = new System.Drawing.Point(134, 436);
+            this.txtEcole.Location = new System.Drawing.Point(134, 399);
             this.txtEcole.Name = "txtEcole";
             this.txtEcole.Size = new System.Drawing.Size(148, 20);
             this.txtEcole.TabIndex = 13;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(161, 542);
+            this.btnOK.Location = new System.Drawing.Point(161, 505);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 15;
@@ -290,7 +265,7 @@
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(259, 542);
+            this.btnAnnuler.Location = new System.Drawing.Point(259, 505);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(75, 23);
             this.btnAnnuler.TabIndex = 16;
@@ -314,11 +289,18 @@
             this.txtNumContrat.Size = new System.Drawing.Size(148, 20);
             this.txtNumContrat.TabIndex = 0;
             // 
+            // txtSalaireBrut
+            // 
+            this.txtSalaireBrut.Location = new System.Drawing.Point(134, 240);
+            this.txtSalaireBrut.Name = "txtSalaireBrut";
+            this.txtSalaireBrut.Size = new System.Drawing.Size(148, 20);
+            this.txtSalaireBrut.TabIndex = 9;
+            // 
             // frmContrat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 603);
+            this.ClientSize = new System.Drawing.Size(355, 537);
             this.Controls.Add(this.txtNumContrat);
             this.Controls.Add(this.lblNumContrat);
             this.Controls.Add(this.btnAnnuler);
@@ -338,8 +320,6 @@
             this.Controls.Add(this.dateTimeFin);
             this.Controls.Add(this.lblDateFin);
             this.Controls.Add(this.gpbTypeContrat);
-            this.Controls.Add(this.txtStatut);
-            this.Controls.Add(this.lblStatut);
             this.Controls.Add(this.txtQualification);
             this.Controls.Add(this.lblQualification);
             this.Controls.Add(this.dateTimeDebut);
@@ -356,16 +336,13 @@
         #endregion
 
         private System.Windows.Forms.Label lblDateDebut;
-        private System.Windows.Forms.DateTimePicker dateTimeDebut;
         private System.Windows.Forms.Label lblQualification;
-        private System.Windows.Forms.Label lblStatut;
         private System.Windows.Forms.GroupBox gpbTypeContrat;
         private System.Windows.Forms.RadioButton rbtInterim;
         private System.Windows.Forms.RadioButton rbtStage;
         private System.Windows.Forms.RadioButton rbtCDD;
         private System.Windows.Forms.RadioButton rbtCDI;
         private System.Windows.Forms.Label lblDateFin;
-        private System.Windows.Forms.DateTimePicker dateTimeFin;
         private System.Windows.Forms.Label lblSalaireBrut;
         private System.Windows.Forms.Label lblMotif;
         private System.Windows.Forms.Label lblAgenceInterim;
@@ -373,16 +350,17 @@
         private System.Windows.Forms.Label lblEcole;
         private System.Windows.Forms.Label lblMission;
         private System.Windows.Forms.Button btnAnnuler;
-        internal System.Windows.Forms.TextBox txtSalaireBrut;
         internal System.Windows.Forms.TextBox txtMotif;
         internal System.Windows.Forms.TextBox txtAgence;
         internal System.Windows.Forms.TextBox txtIndemnisation;
         internal System.Windows.Forms.TextBox txtMission;
         internal System.Windows.Forms.TextBox txtEcole;
         internal System.Windows.Forms.TextBox txtQualification;
-        internal System.Windows.Forms.TextBox txtStatut;
         private System.Windows.Forms.Label lblNumContrat;
         internal System.Windows.Forms.TextBox txtNumContrat;
         internal System.Windows.Forms.Button btnOK;
+        internal System.Windows.Forms.TextBox txtSalaireBrut;
+        internal System.Windows.Forms.DateTimePicker dateTimeDebut;
+        internal System.Windows.Forms.DateTimePicker dateTimeFin;
     }
 }
